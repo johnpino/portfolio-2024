@@ -9,6 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
+    "prepare:husky": "husky",
     "clean:nuxt": "nuxi cleanup",
     "typecheck:nuxt": "nuxi typecheck",
     "contentful:types": "node ./scripts/contentful-types.js",
@@ -25,9 +26,12 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "cf-content-types-generator": "^2.15.3",
     "contentful-cli": "^3.3.4",
     "eslint": "^8.47.0",
+    "husky": "^9.1.4",
     "lint-staged": "^15.2.9",
     "nuxt": "^3.6.5",
     "typescript": "^5.5.4",
