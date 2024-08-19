@@ -1,0 +1,6 @@
+{
+  "*.{js,jsx,ts,tsx,vue}": [
+    "eslint --fix",
+    "nuxi typecheck ."
+  ]
+}
