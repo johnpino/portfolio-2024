@@ -1,0 +1,1563 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "hero",
+        "type": "ContentType",
+        "createdAt": "2023-06-10T22:44:02.011Z",
+        "updatedAt": "2023-06-10T22:45:10.709Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-06-10T22:45:10.709Z",
+        "firstPublishedAt": "2023-06-10T22:44:02.390Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/content_types/hero"
+      },
+      "displayField": "title",
+      "name": "Hero",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "skill",
+        "type": "ContentType",
+        "createdAt": "2023-06-10T23:49:19.340Z",
+        "updatedAt": "2023-06-10T23:49:19.688Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-06-10T23:49:19.688Z",
+        "firstPublishedAt": "2023-06-10T23:49:19.688Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/content_types/skill"
+      },
+      "displayField": "name",
+      "name": "Skill",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "level",
+          "name": "Level",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "disabled",
+        "type": "ContentType",
+        "createdAt": "2023-06-11T16:53:15.009Z",
+        "updatedAt": "2024-08-18T23:18:15.260Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-08-18T23:18:15.260Z",
+        "firstPublishedAt": "2023-06-11T16:53:15.435Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/content_types/disabled"
+      },
+      "displayField": "description",
+      "name": "Disabled",
+      "description": "",
+      "fields": [
+        {
+          "id": "heading1stRow",
+          "name": "Heading - 1st Row",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "heading2ndRow",
+          "name": "Heading - 2nd Row",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subheading",
+          "name": "Subheading",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2023-06-11T17:26:06.279Z",
+        "updatedAt": "2023-06-12T12:12:42.774Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-06-12T12:12:42.774Z",
+        "firstPublishedAt": "2023-06-11T17:26:06.679Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/content_types/page"
+      },
+      "displayField": "title",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "features",
+          "name": "Features",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "disabled",
+                  "hero"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "yejtaz3k5m36",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-06-10T22:44:02.508Z",
+        "createdBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-06-10T22:45:11.618Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "hero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "editors": [
+        {
+          "widgetId": "default-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "tags-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "69mKkEFmMO9ue4lwWfto2C",
+          "widgetNamespace": "app"
+        }
+      ],
+      "sidebar": [
+        {
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "703nAvCC2nuDjQCiI5P8e2",
+          "widgetNamespace": "app"
+        },
+        {
+          "disabled": true,
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "yejtaz3k5m36",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-06-10T23:49:19.796Z",
+        "createdBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-06-10T23:49:20.443Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "skill",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "editors": [
+        {
+          "widgetId": "default-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "tags-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "69mKkEFmMO9ue4lwWfto2C",
+          "widgetNamespace": "app"
+        }
+      ],
+      "sidebar": [
+        {
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "widgetId": "703nAvCC2nuDjQCiI5P8e2",
+          "widgetNamespace": "app"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "level",
+          "widgetId": "rating",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "yejtaz3k5m36",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2023-06-11T16:53:15.616Z",
+        "createdBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-08-18T23:18:15.909Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "disabled",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "editors": [
+        {
+          "widgetId": "default-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "tags-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "69mKkEFmMO9ue4lwWfto2C",
+          "widgetNamespace": "app"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "heading1stRow",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heading2ndRow",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subheading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "yejtaz3k5m36",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 16,
+        "createdAt": "2023-06-11T17:26:06.797Z",
+        "createdBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-06-12T12:12:43.720Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "editors": [
+        {
+          "widgetId": "default-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "tags-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "69mKkEFmMO9ue4lwWfto2C",
+          "widgetNamespace": "app"
+        }
+      ],
+      "sidebar": [
+        {
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "703nAvCC2nuDjQCiI5P8e2",
+          "widgetNamespace": "app"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "features",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3zyKQANLZWb3rvAyjmNuyr",
+        "type": "Entry",
+        "createdAt": "2023-06-10T23:49:50.963Z",
+        "updatedAt": "2023-06-10T23:50:17.895Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-06-10T23:50:17.895Z",
+        "firstPublishedAt": "2023-06-10T23:50:17.895Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "skill"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3zyKQANLZWb3rvAyjmNuyr"
+      },
+      "fields": {
+        "name": {
+          "en-US": "JavaScript"
+        },
+        "level": {
+          "en-US": 5
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "22dQ9kI0LmOzCrMgydJKw5",
+        "type": "Entry",
+        "createdAt": "2023-06-11T16:53:33.490Z",
+        "updatedAt": "2024-08-18T23:07:49.927Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 96,
+        "publishedAt": "2024-08-18T23:07:49.927Z",
+        "firstPublishedAt": "2023-06-11T17:08:13.983Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 97,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "disabled"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/22dQ9kI0LmOzCrMgydJKw5"
+      },
+      "fields": {
+        "heading1stRow": {
+          "en-US": "From the Desk"
+        },
+        "heading2ndRow": {
+          "en-US": "John Pino."
+        },
+        "subheading": {
+          "en-US": "Frontend Development"
+        },
+        "description": {
+          "en-US": "Under development..."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2gVxJIZ8iZDO5DGzTke1IE",
+        "type": "Entry",
+        "createdAt": "2023-06-11T17:26:12.529Z",
+        "updatedAt": "2023-07-19T17:19:27.213Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2023-06-12T02:06:17.274Z",
+        "firstPublishedAt": "2023-06-11T17:26:37.415Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2gVxJIZ8iZDO5DGzTke1IE"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home"
+        },
+        "slug": {
+          "en-US": "/back-soon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "5rksoOYVteSZhYJnyAOR1a",
+        "type": "Entry",
+        "createdAt": "2023-06-12T02:11:12.555Z",
+        "updatedAt": "2023-06-13T17:37:24.841Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2023-06-12T12:12:58.567Z",
+        "firstPublishedAt": "2023-06-12T02:14:50.674Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/5rksoOYVteSZhYJnyAOR1a"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Under development"
+        },
+        "slug": {
+          "en-US": "back-soon"
+        },
+        "description": {
+          "en-US": "From the Desk of John Pino is currently under development."
+        },
+        "features": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "22dQ9kI0LmOzCrMgydJKw5"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "3LlCOZhowAItO5l6mssxdh",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "88688081-5f6d-4dc4-b849-3d485fe85239"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "createdAt": "2023-06-10T22:38:45Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedAt": "2023-06-10T22:38:45Z"
+      }
+    }
+  ],
+  "webhooks": [
+    {
+      "name": "Disable Draft Mode",
+      "url": "https://www.johnpino.me/api/disable-draft",
+      "httpBasicUsername": null,
+      "topics": [
+        "Entry.save",
+        "Entry.publish"
+      ],
+      "filters": null,
+      "transformation": {
+        "method": "GET"
+      },
+      "active": true,
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "1wjWLinOuDFc54xex5RL39",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "createdAt": "2023-06-12T22:41:29Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedAt": "2023-06-12T22:42:29Z"
+      },
+      "headers": [
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3LN2QU7FuBy9Irx6fHuu27",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "createdAt": "2023-06-10T22:38:46Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedAt": "2023-06-10T22:38:46Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3LNHlatQnU6CGjFm8WPLl1",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "createdAt": "2023-06-10T22:38:46Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedAt": "2023-06-10T22:38:46Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3LOhgmREnku5kUVejBOb1h",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "createdAt": "2023-06-10T22:38:46Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedAt": "2023-06-10T22:38:46Z"
+      }
+    }
+  ]
+}

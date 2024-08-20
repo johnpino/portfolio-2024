@@ -12,8 +12,8 @@
     "prepare:husky": "husky",
     "clean:nuxt": "nuxi cleanup",
     "typecheck:nuxt": "nuxi typecheck",
-    "contentful:types": "node ./scripts/contentful-types.js",
-    "contentful:export": "node ./scripts/contentful-export.js",
+    "contentful:types": "node ./scripts/contentful-types.cjs",
+    "contentful:export": "node ./scripts/contentful-export.cjs",
     "contentful:generate-types": "npm run contentful:export && npm run contentful:types"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@nuxt/devtools": "^1.3.9",
     "cf-content-types-generator": "^2.15.3",
     "contentful-cli": "^3.3.4",
     "eslint": "^8.47.0",
