@@ -16,8 +16,8 @@ export default defineNuxtConfig({
     contentfulEnvironment: process.env.CONTENTFUL_ENVIRONMENT,
     contentfulDeliveryAccessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
     public: {
-      backSoon: process.env.BACK_SOON,
-      maintenanceUrl: process.env.MAINTENANCE_URL
+      backSoon: process.env.PUBLIC_BACK_SOON,
+      maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL
     }
   }
 })
