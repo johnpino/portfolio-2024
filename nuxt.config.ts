@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     contentfulAPIEndpoint: process.env.CONTENTFUL_API_ENDPOINT,
     contentfulSpaceID: process.env.CONTENTFUL_SPACE_ID,
     contentfulEnvironment: process.env.CONTENTFUL_ENVIRONMENT,
-    contentfulDeliveryAccessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN
+    contentfulDeliveryAccessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
+    public: {
+      backSoon: process.env.BACK_SOON,
+      maintenanceUrl: process.env.MAINTENANCE_URL
+    }
   }
 })

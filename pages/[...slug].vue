@@ -11,6 +11,8 @@ const route = useRoute()
 const slug = route.params.slug
 const contentType = 'page'
 
+if(!slug) navigateTo('/back-soon')
+
 const { data } = await useFetch(`/api/contentful-page?contentType=${contentType}&slug=${slug}`)
 
 useHeadSafe({
