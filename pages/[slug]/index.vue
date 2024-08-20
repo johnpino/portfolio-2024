@@ -1,7 +1,7 @@
 <template>
   <div>
     <component 
-      :is="feature?.sys.contentType.sys.id!" v-for="feature in features" :key="feature?.sys.id"
+      :is="`my-${feature?.sys.contentType.sys.id}`" v-for="feature in features" :key="feature?.sys.id"
       v-bind="feature" />
   </div>
 </template>
