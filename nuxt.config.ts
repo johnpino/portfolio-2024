@@ -15,6 +15,8 @@ export default defineNuxtConfig({
     contentfulSpaceID: process.env.CONTENTFUL_SPACE_ID,
     contentfulEnvironment: process.env.CONTENTFUL_ENVIRONMENT,
     contentfulDeliveryAccessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
+    openaiApiKey: process.env.OPENAI_API_KEY,
+    assistantId: process.env.OPENAI_ASSITANT_ID,
     public: {
       backSoon: process.env.PUBLIC_BACK_SOON,
       maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL
