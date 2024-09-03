@@ -1,20 +1,24 @@
-import type { AsyncDataRequestStatus } from "#app";
-
 import type OpenAI from "openai";
 
 const resolveStream = async ({
   onChunk,
   onReady,
+  onStart,
   stream,
 }: {
-  onChunk: (data: string) => void,
-  onReady: () => void,
-  stream: ReadableStream<Uint8Array> | null
+  onChunk: (data: string) => void;
+  onReady: () => void;
+  onStart: () => void;
+  stream: ReadableStream<Uint8Array> | null;
 }) => {
 
   if (!stream) return
 
   const reader = stream.pipeThrough(new TextDecoderStream()).getReader();
+
+
+
+  let onStartCalled = false
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
@@ -31,6 +35,11 @@ const resolveStream = async ({
         !chunk.data.delta.content?.length ||
         chunk.data.delta.content[0].type !== 'text' ||
         !chunk.data.delta.content[0].text?.value) continue
+
+      if (!onStartCalled) {
+        onStart()
+        onStartCalled = true
+      }
 
       onChunk(chunk.data.delta.content[0].text.value);
     }
@@ -52,6 +61,7 @@ interface UseOpenaiProps {
 }
 
 export const useOpenai = (props: UseOpenaiProps = {}) => {
+  const isLoading = ref(false)
   const threadId = ref()
 
   watch(threadId, val => {
@@ -73,9 +83,9 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
     content: ''
   })
 
-  const requestStatus = ref<AsyncDataRequestStatus>()
-
   const sendMessage = async (message: string) => {
+
+    isLoading.value = true
 
     messages.value.push({
       role: 'user',
@@ -101,9 +111,12 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
         messages.value.push({ ...answer.value });
         answer.value.content = ''
       },
+      onStart: () => {
+        isLoading.value = false
+      }
     })
 
   }
 
-  return { sendMessage, answer, requestStatus, messages }
+  return { sendMessage, answer, isLoading, messages }
 }

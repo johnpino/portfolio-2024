@@ -6,13 +6,12 @@ v-for="message in messages" :key="message.content" class="p-2 bg-slate-100 round
         :class="message.role === 'user' && 'self-end bg-slate-200'">
         {{ message.content }}
       </div>
-      <div v-if="answer.content" ref="answerRef" class="p-2 bg-slate-100 rounded-md font-light text-sm">{{ requestStatus
-        === 'pending' ? 'Loading' : answer.content }}</div>
+      <div v-if="answer.content || isLoading" ref="answerRef" class="p-2 bg-slate-100 rounded-md font-light text-sm">{{ isLoading ? '...' : answer.content }}</div>
     </div>
     <form class="flex gap-4 flex-col" @submit.prevent="submitHandler">
       <textarea
 v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
-        :placeholder="inputPlaceholder" />
+        :placeholder="inputPlaceholder" required />
       <button class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white uppercase text-xs font-bold" type="submit">{{ send }}</button>
     </form>
   </div>
@@ -27,15 +26,16 @@ const { initialMessage } = defineProps<MyChatUIProps>()
 const answerRef = ref<HTMLDivElement>()
 const question = ref()
 
-const { sendMessage, answer, requestStatus, messages } = useOpenai({ initialMessage })
+const { sendMessage, answer, isLoading, messages } = useOpenai({ initialMessage })
 
 watch(answer, throttle(() => {
   if(answerRef.value) answerRef.value.scrollIntoView({ behavior: 'smooth' })
 }, 200), { deep: true })
 
 const submitHandler = async () => {
-  await sendMessage(question.value)
+  const value  = question.value
   question.value = null
+  await sendMessage(value)
 }
 
 </script>
