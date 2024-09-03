@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .rich-text {
+        p:not(:last-child) {
+            @apply mb-4;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        ul {
+            @apply list-disc;
+        }
+
+        ol, ul {
+            @apply pl-8;
+        }
+
+        li {
+            @apply mb-3;
+        }
+
+        b, strong {
+            @apply font-semibold;
+        }
+    }
+}

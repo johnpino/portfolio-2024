@@ -1,4 +1,5 @@
 import type OpenAI from "openai";
+import markdownit from 'markdown-it'
 
 const resolveStream = async ({
   onChunk,
@@ -15,8 +16,6 @@ const resolveStream = async ({
   if (!stream) return
 
   const reader = stream.pipeThrough(new TextDecoderStream()).getReader();
-
-
 
   let onStartCalled = false
 
@@ -61,6 +60,7 @@ interface UseOpenaiProps {
 }
 
 export const useOpenai = (props: UseOpenaiProps = {}) => {
+  const md = markdownit()
   const isLoading = ref(false)
   const threadId = ref()
 
@@ -76,9 +76,11 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
     }
   }
 
-  const messages = ref<Array<{ role: string, content: string }>>(props.initialMessage ? [{ role: 'assistant', content: props.initialMessage }] : [])
+  const messages = reactive<Array<{ role: string, content: string }>>(props.initialMessage ? [{ role: 'assistant', content: props.initialMessage }] : [])
 
-  const answer = ref({
+  let rawMarkdown = ''
+
+  const answer = reactive({
     role: 'assistant',
     content: ''
   })
@@ -87,7 +89,7 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
 
     isLoading.value = true
 
-    messages.value.push({
+    messages.push({
       role: 'user',
       content: message
     })
@@ -105,11 +107,13 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
     resolveStream({
       stream: stream.body,
       onChunk: (data) => {
-        answer.value.content += data;
+        rawMarkdown += data
+        answer.content = md.render(rawMarkdown);
       },
       onReady: () => {
-        messages.value.push({ ...answer.value });
-        answer.value.content = ''
+        messages.push({ ...answer });
+        rawMarkdown = ''
+        answer.content = ''
       },
       onStart: () => {
         isLoading.value = false

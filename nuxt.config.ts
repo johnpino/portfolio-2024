@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
   modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "nuxt-lodash"],
   alias: {
     'contentful-types': fileURLToPath(new URL('./contentful/types', import.meta.url)),
