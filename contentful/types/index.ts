@@ -1,3 +1,4 @@
+export type { TypeChat, TypeChatFields, TypeChatSkeleton } from "./TypeChat";
 export type { TypeDisabled, TypeDisabledFields, TypeDisabledSkeleton } from "./TypeDisabled";
 export type { TypeHero, TypeHeroFields, TypeHeroSkeleton } from "./TypeHero";
 export type { TypePage, TypePageFields, TypePageSkeleton } from "./TypePage";

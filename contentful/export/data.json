@@ -276,7 +276,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2023-06-11T17:26:06.279Z",
-        "updatedAt": "2023-06-12T12:12:42.774Z",
+        "updatedAt": "2024-09-03T14:33:44.743Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -284,8 +284,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2023-06-12T12:12:42.774Z",
+        "publishedVersion": 17,
+        "publishedAt": "2024-09-03T14:33:44.743Z",
         "firstPublishedAt": "2023-06-11T17:26:06.679Z",
         "createdBy": {
           "sys": {
@@ -301,8 +301,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 8,
-        "version": 16,
+        "publishedCounter": 9,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -371,12 +371,89 @@
               {
                 "linkContentType": [
                   "disabled",
-                  "hero"
+                  "hero",
+                  "chat"
                 ]
               }
             ],
             "linkType": "Entry"
           }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "chat",
+        "type": "ContentType",
+        "createdAt": "2024-09-03T14:32:16.823Z",
+        "updatedAt": "2024-09-03T14:32:17.447Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-09-03T14:32:17.447Z",
+        "firstPublishedAt": "2024-09-03T14:32:17.447Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/content_types/chat"
+      },
+      "displayField": "title",
+      "name": "Chat",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "send",
+          "name": "Send",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     }
@@ -687,7 +764,7 @@
             "linkType": "Space"
           }
         },
-        "version": 16,
+        "version": 18,
         "createdAt": "2023-06-11T17:26:06.797Z",
         "createdBy": {
           "sys": {
@@ -696,7 +773,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-06-12T12:12:43.720Z",
+        "updatedAt": "2024-09-03T14:33:45.356Z",
         "updatedBy": {
           "sys": {
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
@@ -735,10 +812,14 @@
       ],
       "sidebar": [
         {
+          "settings": {
+          },
           "widgetId": "publication-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
+          "settings": {
+          },
           "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
@@ -774,6 +855,62 @@
         {
           "fieldId": "features",
           "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "yejtaz3k5m36",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-09-03T14:32:17.662Z",
+        "createdBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-09-03T14:32:18.198Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "chat",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "send",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -849,6 +986,86 @@
         },
         "level": {
           "en-US": 5
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6ihR56PU6a27kW1Btq0W2m",
+        "type": "Entry",
+        "createdAt": "2023-06-10T23:53:45.627Z",
+        "updatedAt": "2024-09-03T14:24:12.676Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-09-03T14:24:12.676Z",
+        "firstPublishedAt": "2024-09-03T14:16:34.918Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6ihR56PU6a27kW1Btq0W2m"
+      },
+      "fields": {
+        "title": {
+          "en-US": "From the Desk of John Pino"
+        },
+        "subtitle": {
+          "en-US": "Senior Frontend Developer @ Valtech | Vue & Contentful Specialist | UI/UX-Driven Frontend"
+        },
+        "description": {
+          "en-US": "This portfolio is still under development, but feel free to ask Johnny for more information about my skills and projects."
         }
       }
     },
@@ -953,7 +1170,7 @@
         "id": "2gVxJIZ8iZDO5DGzTke1IE",
         "type": "Entry",
         "createdAt": "2023-06-11T17:26:12.529Z",
-        "updatedAt": "2024-08-19T17:38:14.213Z",
+        "updatedAt": "2024-09-03T14:33:57.284Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -961,8 +1178,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 18,
-        "publishedAt": "2024-08-19T17:38:14.213Z",
+        "publishedVersion": 22,
+        "publishedAt": "2024-09-03T14:33:57.284Z",
         "firstPublishedAt": "2023-06-11T17:26:37.415Z",
         "createdBy": {
           "sys": {
@@ -978,8 +1195,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 7,
-        "version": 19,
+        "publishedCounter": 9,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1009,6 +1226,24 @@
         },
         "slug": {
           "en-US": "/"
+        },
+        "features": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6ihR56PU6a27kW1Btq0W2m"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "zI8cKD26qePNXwfHCoBEY"
+              }
+            }
+          ]
         }
       }
     },
@@ -1100,6 +1335,83 @@
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "zI8cKD26qePNXwfHCoBEY",
+        "type": "Entry",
+        "createdAt": "2024-09-03T14:32:56.908Z",
+        "updatedAt": "2024-09-03T14:33:10.236Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-03T14:33:10.236Z",
+        "firstPublishedAt": "2024-09-03T14:33:10.236Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chat"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/zI8cKD26qePNXwfHCoBEY"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Chat OpenAI"
+        },
+        "send": {
+          "en-US": "Ask Johnny"
         }
       }
     }
