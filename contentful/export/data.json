@@ -393,7 +393,7 @@
         "id": "chat",
         "type": "ContentType",
         "createdAt": "2024-09-03T14:32:16.823Z",
-        "updatedAt": "2024-09-03T16:03:23.567Z",
+        "updatedAt": "2024-09-03T16:33:01.206Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -401,8 +401,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-09-03T16:03:23.567Z",
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-03T16:33:01.206Z",
         "firstPublishedAt": "2024-09-03T14:32:17.447Z",
         "createdBy": {
           "sys": {
@@ -418,8 +418,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -458,6 +458,17 @@
         {
           "id": "initialMessage",
           "name": "Initial Message",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "inputPlaceholder",
+          "name": "Input Placeholder",
           "type": "Symbol",
           "localized": false,
           "required": false,
@@ -881,7 +892,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 6,
         "createdAt": "2024-09-03T14:32:17.662Z",
         "createdBy": {
           "sys": {
@@ -890,7 +901,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-09-03T16:03:24.829Z",
+        "updatedAt": "2024-09-03T16:33:01.898Z",
         "updatedBy": {
           "sys": {
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
@@ -926,6 +937,11 @@
         },
         {
           "fieldId": "initialMessage",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "inputPlaceholder",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
@@ -1372,7 +1388,7 @@
         "id": "zI8cKD26qePNXwfHCoBEY",
         "type": "Entry",
         "createdAt": "2024-09-03T14:32:56.908Z",
-        "updatedAt": "2024-09-03T14:33:10.236Z",
+        "updatedAt": "2024-09-03T16:33:11.807Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1380,8 +1396,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-09-03T14:33:10.236Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-09-03T16:33:11.807Z",
         "firstPublishedAt": "2024-09-03T14:33:10.236Z",
         "createdBy": {
           "sys": {
@@ -1397,8 +1413,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1428,6 +1444,12 @@
         },
         "send": {
           "en-US": "Ask Johnny"
+        },
+        "initialMessage": {
+          "en-US": "Hola! Soy Johnny, ¿cómo te puedo ayudar?"
+        },
+        "inputPlaceholder": {
+          "en-US": "Ask Johnny..."
         }
       }
     }

@@ -7,7 +7,7 @@
     </div>
     <div class="mb-8">{{ requestStatus === 'pending' ? 'Loading' : answer.content }}</div>
     <form class="flex gap-4 flex-col" @submit.prevent="submitHandler">
-      <textarea v-model="question" class="border" />
+      <textarea v-model="question" class="border p-2 resize-none text-sm rounded-sm" :placeholder="inputPlaceholder" />
       <button type="submit">{{ send }}</button>
     </form>
   </div>

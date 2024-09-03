@@ -4,6 +4,7 @@ export interface TypeChatFields {
     title: EntryFieldTypes.Symbol;
     send: EntryFieldTypes.Symbol;
     initialMessage?: EntryFieldTypes.Symbol;
+    inputPlaceholder?: EntryFieldTypes.Symbol;
 }
 
 export type TypeChatSkeleton = EntrySkeletonType<TypeChatFields, "chat">;
