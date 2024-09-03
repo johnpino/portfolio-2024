@@ -13,7 +13,7 @@ v-for="message in messages" :key="message.content" class="p-2 bg-slate-100 round
       <textarea
 v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
         :placeholder="inputPlaceholder" />
-      <button type="submit">{{ send }}</button>
+      <button class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white uppercase text-xs font-bold" type="submit">{{ send }}</button>
     </form>
   </div>
 </template>
