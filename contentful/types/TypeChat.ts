@@ -3,6 +3,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeChatFields {
     title: EntryFieldTypes.Symbol;
     send: EntryFieldTypes.Symbol;
+    initialMessage?: EntryFieldTypes.Symbol;
 }
 
 export type TypeChatSkeleton = EntrySkeletonType<TypeChatFields, "chat">;

@@ -21,8 +21,6 @@ const resolveStream = async ({
     const stream = await reader.read();
     if (stream.done) break;
 
-    console.log(stream)
-
     const chunks = stream?.value
       .split("\n")
       .filter((i) => Boolean(i.length))
@@ -41,12 +39,19 @@ const resolveStream = async ({
   onReady();
 };
 
-const createThread = async (ref: Ref) => {
-  const data = await $fetch('api/create/thread')
+const createThread = async (ref: Ref, initialMessage?: string) => {
+  const data = await $fetch('api/create/thread', {
+    method: 'post',
+    body: { initialMessage }
+  })
   ref.value = data
 }
 
-export const useOpenai = () => {
+interface UseOpenaiProps {
+  initialMessage?: string
+}
+
+export const useOpenai = (props: UseOpenaiProps = {}) => {
   const threadId = ref()
 
   watch(threadId, val => {
@@ -57,11 +62,11 @@ export const useOpenai = () => {
     threadId.value = localStorage.getItem('threadId')
 
     if (!threadId.value) {
-      createThread(threadId)
+      createThread(threadId, props.initialMessage)
     }
   }
 
-  const messages = ref<Array<{ role: string, content: string }>>([])
+  const messages = ref<Array<{ role: string, content: string }>>(props.initialMessage ? [{ role: 'assistant', content: props.initialMessage }] : [])
 
   const answer = ref({
     role: 'assistant',

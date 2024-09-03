@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="max-w-[500px]">
     <div>
-      <div v-for="message in messages" :key="message.content" class="mb-8" >
+      <div v-for="message in messages" :key="message.content" class="mb-8">
         {{ message.content }}
       </div>
     </div>
@@ -16,11 +16,11 @@
 <script setup lang="ts">
 import type { MyChatUIProps } from './MyChatUIProps'
 
-defineProps<MyChatUIProps>()
+const { initialMessage } = defineProps<MyChatUIProps>()
 
 const question = ref()
 
-const { sendMessage, answer, requestStatus, messages } = useOpenai()
+const { sendMessage, answer, requestStatus, messages } = useOpenai({ initialMessage })
 
 const submitHandler = async () => {
   await sendMessage(question.value)

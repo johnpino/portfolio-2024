@@ -13,7 +13,8 @@ const MyChat: FunctionalComponent<TypeChat<'WITHOUT_UNRESOLVABLE_LINKS', ''>> = 
   props
 ) => {
   const dataUI: MyChatUIProps = {
-    send: props.fields.send
+    send: props.fields.send,
+    initialMessage: props.fields.initialMessage
   }
 
   return (

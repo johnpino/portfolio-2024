@@ -393,7 +393,7 @@
         "id": "chat",
         "type": "ContentType",
         "createdAt": "2024-09-03T14:32:16.823Z",
-        "updatedAt": "2024-09-03T14:32:17.447Z",
+        "updatedAt": "2024-09-03T16:03:23.567Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -401,8 +401,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-09-03T14:32:17.447Z",
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-03T16:03:23.567Z",
         "firstPublishedAt": "2024-09-03T14:32:17.447Z",
         "createdBy": {
           "sys": {
@@ -418,8 +418,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -450,6 +450,17 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "initialMessage",
+          "name": "Initial Message",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -870,7 +881,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2024-09-03T14:32:17.662Z",
         "createdBy": {
           "sys": {
@@ -879,7 +890,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-09-03T14:32:18.198Z",
+        "updatedAt": "2024-09-03T16:03:24.829Z",
         "updatedBy": {
           "sys": {
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
@@ -910,6 +921,11 @@
         },
         {
           "fieldId": "send",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "initialMessage",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
