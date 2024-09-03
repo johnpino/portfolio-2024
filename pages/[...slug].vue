@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto px-8 grid justify-center gap-8 min-h-screen content-center">
     <component 
       :is="`my-${feature?.sys.contentType.sys.id}`" v-for="feature in features" :key="feature?.sys.id"
       v-bind="feature" />
