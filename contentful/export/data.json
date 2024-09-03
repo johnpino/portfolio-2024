@@ -12,7 +12,7 @@
         "id": "hero",
         "type": "ContentType",
         "createdAt": "2023-06-10T22:44:02.011Z",
-        "updatedAt": "2023-06-10T22:45:10.709Z",
+        "updatedAt": "2024-09-03T14:10:50.698Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2023-06-10T22:45:10.709Z",
+        "publishedVersion": 9,
+        "publishedAt": "2024-09-03T14:10:50.698Z",
         "firstPublishedAt": "2023-06-10T22:44:02.390Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 4,
-        "version": 8,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -79,7 +79,7 @@
           "name": "Description",
           "type": "Symbol",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -395,7 +395,7 @@
             "linkType": "Space"
           }
         },
-        "version": 8,
+        "version": 10,
         "createdAt": "2023-06-10T22:44:02.508Z",
         "createdBy": {
           "sys": {
@@ -404,7 +404,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-06-10T22:45:11.618Z",
+        "updatedAt": "2024-09-03T14:10:51.843Z",
         "updatedBy": {
           "sys": {
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
@@ -445,10 +445,14 @@
       ],
       "sidebar": [
         {
+          "settings": {
+          },
           "widgetId": "publication-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
+          "settings": {
+          },
           "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
@@ -866,7 +870,7 @@
         "id": "22dQ9kI0LmOzCrMgydJKw5",
         "type": "Entry",
         "createdAt": "2023-06-11T16:53:33.490Z",
-        "updatedAt": "2024-08-18T23:07:49.927Z",
+        "updatedAt": "2024-08-20T02:39:43.764Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -874,8 +878,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 96,
-        "publishedAt": "2024-08-18T23:07:49.927Z",
+        "publishedVersion": 100,
+        "publishedAt": "2024-08-20T02:39:43.764Z",
         "firstPublishedAt": "2023-06-11T17:08:13.983Z",
         "createdBy": {
           "sys": {
@@ -891,8 +895,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 12,
-        "version": 97,
+        "publishedCounter": 14,
+        "version": 101,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -918,16 +922,16 @@
       },
       "fields": {
         "heading1stRow": {
-          "en-US": "From the Desk"
+          "en-US": "From the Desk of"
         },
         "heading2ndRow": {
-          "en-US": "John Pino."
+          "en-US": "John Pino"
         },
         "subheading": {
           "en-US": "Frontend Development"
         },
         "description": {
-          "en-US": "Under development..."
+          "en-US": "Under development"
         }
       }
     },
@@ -949,7 +953,7 @@
         "id": "2gVxJIZ8iZDO5DGzTke1IE",
         "type": "Entry",
         "createdAt": "2023-06-11T17:26:12.529Z",
-        "updatedAt": "2023-07-19T17:19:27.213Z",
+        "updatedAt": "2024-08-19T17:38:14.213Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -957,8 +961,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 14,
-        "publishedAt": "2023-06-12T02:06:17.274Z",
+        "publishedVersion": 18,
+        "publishedAt": "2024-08-19T17:38:14.213Z",
         "firstPublishedAt": "2023-06-11T17:26:37.415Z",
         "createdBy": {
           "sys": {
@@ -974,13 +978,18 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 6,
-        "version": 16,
+        "publishedCounter": 7,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
           }
         },
         "automationTags": [
@@ -999,7 +1008,7 @@
           "en-US": "Home"
         },
         "slug": {
-          "en-US": "/back-soon"
+          "en-US": "/"
         }
       }
     },
@@ -1021,7 +1030,7 @@
         "id": "5rksoOYVteSZhYJnyAOR1a",
         "type": "Entry",
         "createdAt": "2023-06-12T02:11:12.555Z",
-        "updatedAt": "2023-06-13T17:37:24.841Z",
+        "updatedAt": "2024-08-19T17:38:39.469Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1029,8 +1038,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2023-06-12T12:12:58.567Z",
+        "publishedVersion": 26,
+        "publishedAt": "2024-08-19T17:38:39.469Z",
         "firstPublishedAt": "2023-06-12T02:14:50.674Z",
         "createdBy": {
           "sys": {
@@ -1046,13 +1055,18 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 3,
-        "version": 21,
+        "publishedCounter": 6,
+        "version": 27,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
           }
         },
         "automationTags": [
@@ -1071,7 +1085,7 @@
           "en-US": "Under development"
         },
         "slug": {
-          "en-US": "back-soon"
+          "en-US": "/back-soon"
         },
         "description": {
           "en-US": "From the Desk of John Pino is currently under development."

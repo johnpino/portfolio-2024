@@ -3,7 +3,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeHeroFields {
     title: EntryFieldTypes.Symbol;
     subtitle: EntryFieldTypes.Symbol;
-    description?: EntryFieldTypes.Symbol;
+    description: EntryFieldTypes.Symbol;
 }
 
 export type TypeHeroSkeleton = EntrySkeletonType<TypeHeroFields, "hero">;
