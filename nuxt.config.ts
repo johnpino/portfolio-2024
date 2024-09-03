@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "nuxt-lodash"],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'nuxt-lodash'],
   alias: {
     'contentful-types': fileURLToPath(new URL('./contentful/types', import.meta.url)),
   },
@@ -20,7 +20,12 @@ export default defineNuxtConfig({
     assistantId: process.env.OPENAI_ASSITANT_ID,
     public: {
       backSoon: process.env.PUBLIC_BACK_SOON,
-      maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL
-    }
-  }
+      maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL,
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })
