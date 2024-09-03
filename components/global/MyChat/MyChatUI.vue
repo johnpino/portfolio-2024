@@ -1,19 +1,23 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="max-w-[500px]">
-    <div class="rich-text max-h-[300px] overflow-y-scroll rounded-t-md bg-slate-50 p-4 flex gap-4 flex-col border border-b-0">
+    <div
+      class="rich-text max-h-[300px] overflow-y-scroll rounded-t-md bg-slate-50 p-4 flex gap-4 flex-col border border-b-0">
       <div
-v-for="message in messages" :key="message.content" class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
+        v-for="message in messages" :key="message.content"
+        class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
         :class="message.role === 'user' && 'self-end bg-slate-200'" v-html="message.content" />
       <div
-v-if="answer.content || isLoading" ref="answerRef" class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
-        v-html="isLoading ? '...' : answer.content" />
+        v-if="answer.content || isLoading" ref="answerRef"
+        class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm" v-html="isLoading ? '...' : answer.content" />
     </div>
     <form class="flex gap-4 flex-col" @submit.prevent="submitHandler" @keyup.enter="submitHandler">
       <textarea
-v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
-        :placeholder="inputPlaceholder" required />
+        v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
+        :disabled="!isMounted"
+        :placeholder="!isMounted ? 'Loading...' : inputPlaceholder" required />
       <button
-class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white uppercase text-xs font-bold"
+        class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white uppercase text-xs font-bold"
         type="submit">{{ send }}</button>
     </form>
   </div>
@@ -24,6 +28,7 @@ import type { MyChatUIProps } from './MyChatUIProps'
 
 const { initialMessage } = defineProps<MyChatUIProps>()
 
+const isMounted = ref(false)
 const answerRef = ref<HTMLDivElement>()
 const question = ref()
 
@@ -38,5 +43,9 @@ const submitHandler = async () => {
   question.value = null
   await sendMessage(value)
 }
+
+onMounted(() => {
+  isMounted.value = true
+})
 
 </script>

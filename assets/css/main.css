@@ -27,5 +27,9 @@
         b, strong {
             @apply font-semibold;
         }
+
+        a {
+            @apply font-semibold text-rose-500;
+        }
     }
 }
