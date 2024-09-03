@@ -1,20 +1,17 @@
 import OpenAI from "openai"
 
-interface ResponseType {
-  role: string;
-  content: string;
-}
-
 export default defineEventHandler(async (event) => {
   const { openaiApiKey, assistantId } = useRuntimeConfig(event)
 
-  const body = await readBody(event)
+  const bodyJSON = await readBody(event);
+
+  const body = JSON.parse(bodyJSON)
 
   const client = new OpenAI({
     apiKey: openaiApiKey
   })
 
-  const run = await client.beta.threads.runs.createAndPoll(body.threadId, {
+  const runStream = await client.beta.threads.runs.stream(body.threadId, {
     assistant_id: assistantId,
     additional_messages: [
       {
@@ -24,16 +21,5 @@ export default defineEventHandler(async (event) => {
     ],
   })
 
-  const messages = await client.beta.threads.messages.list(run.thread_id)
-
-  return messages.data.reduce<Array<ResponseType>>((acc, cur) => {
-    const accumulator = [...acc]
-
-    accumulator.push({
-      role: cur.role,
-      content: cur.content[0].type === 'text' ? cur.content[0].text.value : ''
-    })
-
-    return accumulator
-  }, [])
+  return runStream.toReadableStream()
 })
