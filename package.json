@@ -22,7 +22,6 @@
     "@types/contentful-resolve-response": "^0.1.33",
     "contentful": "^10.14.1",
     "contentful-resolve-response": "^1.9.0",
-    "lodash": "^4.17.21",
     "nuxt": "^3.12.4",
     "openai": "^4.57.0",
     "vue": "latest"
@@ -31,13 +30,13 @@
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@nuxt/devtools": "^1.3.9",
-    "@types/lodash": "^4.17.7",
     "cf-content-types-generator": "^2.15.3",
     "contentful-cli": "^3.3.4",
     "eslint": "^8.47.0",
     "husky": "^9.1.4",
     "lint-staged": "^15.2.9",
     "nuxt": "^3.6.5",
+    "nuxt-lodash": "^2.5.3",
     "typescript": "^5.5.4",
     "vue-tsc": "^2.0.29"
   }

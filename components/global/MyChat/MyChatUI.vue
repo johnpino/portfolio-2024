@@ -19,7 +19,6 @@ v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
 
 <script setup lang="ts">
 import type { MyChatUIProps } from './MyChatUIProps'
-import { throttle } from 'lodash';
 
 const { initialMessage } = defineProps<MyChatUIProps>()
 
@@ -28,7 +27,7 @@ const question = ref()
 
 const { sendMessage, answer, isLoading, messages } = useOpenai({ initialMessage })
 
-watch(answer, throttle(() => {
+watch(answer, useThrottle(() => {
   if(answerRef.value) answerRef.value.scrollIntoView({ behavior: 'smooth' })
 }, 200), { deep: true })
 
