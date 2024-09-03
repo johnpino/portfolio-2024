@@ -63,11 +63,6 @@ export const useOpenai = () => {
 
   const messages = ref<Array<{ role: string, content: string }>>([])
 
-  messages.value.push({
-    role: 'user',
-    content: 'Quien es John?'
-  })
-
   const answer = ref({
     role: 'assistant',
     content: ''
@@ -76,6 +71,11 @@ export const useOpenai = () => {
   const requestStatus = ref<AsyncDataRequestStatus>()
 
   const sendMessage = async (message: string) => {
+
+    messages.value.push({
+      role: 'user',
+      content: message
+    })
 
     const stream = await fetch('api/create/message',
       {
@@ -93,7 +93,8 @@ export const useOpenai = () => {
         answer.value.content += data;
       },
       onReady: () => {
-        messages.value.push(answer.value);
+        messages.value.push({ ...answer.value });
+        answer.value.content = ''
       },
     })
 
