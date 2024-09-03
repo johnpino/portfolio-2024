@@ -1,13 +1,18 @@
 <template>
   <div class="max-w-[500px]">
-    <div>
-      <div v-for="message in messages" :key="message.content" class="mb-8">
+    <div class="max-h-[300px] overflow-y-scroll rounded-t-md bg-slate-50 p-4 flex gap-4 flex-col border border-b-0">
+      <div
+v-for="message in messages" :key="message.content" class="p-2 bg-slate-100 rounded-md font-light text-sm"
+        :class="message.role === 'user' && 'self-end bg-slate-200'">
         {{ message.content }}
       </div>
+      <div v-if="answer.content" ref="answerRef" class="p-2 bg-slate-100 rounded-md font-light text-sm">{{ requestStatus
+        === 'pending' ? 'Loading' : answer.content }}</div>
     </div>
-    <div class="mb-8">{{ requestStatus === 'pending' ? 'Loading' : answer.content }}</div>
     <form class="flex gap-4 flex-col" @submit.prevent="submitHandler">
-      <textarea v-model="question" class="border p-2 resize-none text-sm rounded-sm" :placeholder="inputPlaceholder" />
+      <textarea
+v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
+        :placeholder="inputPlaceholder" />
       <button type="submit">{{ send }}</button>
     </form>
   </div>
@@ -15,12 +20,18 @@
 
 <script setup lang="ts">
 import type { MyChatUIProps } from './MyChatUIProps'
+import { throttle } from 'lodash';
 
 const { initialMessage } = defineProps<MyChatUIProps>()
 
+const answerRef = ref<HTMLDivElement>()
 const question = ref()
 
 const { sendMessage, answer, requestStatus, messages } = useOpenai({ initialMessage })
+
+watch(answer, throttle(() => {
+  if(answerRef.value) answerRef.value.scrollIntoView({ behavior: 'smooth' })
+}, 200), { deep: true })
 
 const submitHandler = async () => {
   await sendMessage(question.value)
