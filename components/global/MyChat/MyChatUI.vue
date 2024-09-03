@@ -8,7 +8,7 @@ v-for="message in messages" :key="message.content" class="p-2 bg-slate-100 round
       </div>
       <div v-if="answer.content || isLoading" ref="answerRef" class="p-2 bg-slate-100 rounded-md font-light text-sm">{{ isLoading ? '...' : answer.content }}</div>
     </div>
-    <form class="flex gap-4 flex-col" @submit.prevent="submitHandler">
+    <form class="flex gap-4 flex-col" @submit.prevent="submitHandler" @keyup.enter="submitHandler">
       <textarea
 v-model="question" class="border border-t-0 p-4 resize-none text-sm rounded-sm"
         :placeholder="inputPlaceholder" required />
