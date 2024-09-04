@@ -1,4 +1,3 @@
-import type OpenAI from 'openai'
 import markdownit from 'markdown-it'
 
 const resolveStream = async ({
@@ -10,7 +9,7 @@ const resolveStream = async ({
   onChunk: (data: string) => void
   onReady: () => void
   onStart: () => void
-  stream: ReadableStream<Uint8Array> | null
+  stream: ReadableStream | null
 }) => {
   if (!stream) return
 
@@ -23,24 +22,14 @@ const resolveStream = async ({
     const stream = await reader.read()
     if (stream.done) break
 
-    const chunks = stream?.value
-      .split('\n')
-      .filter(i => Boolean(i.length))
-      .map(i => JSON.parse(i)) as Array<OpenAI.Beta.AssistantStreamEvent>
+    const chunk = stream.value
 
-    for (const chunk of chunks) {
-      if (chunk.event !== 'thread.message.delta'
-        || !chunk.data.delta.content?.length
-        || chunk.data.delta.content[0].type !== 'text'
-        || !chunk.data.delta.content[0].text?.value) continue
-
-      if (!onStartCalled) {
-        onStart()
-        onStartCalled = true
-      }
-
-      onChunk(chunk.data.delta.content[0].text.value)
+    if (!onStartCalled) {
+      onStart()
+      onStartCalled = true
     }
+
+    onChunk(chunk)
   }
 
   onReady()
