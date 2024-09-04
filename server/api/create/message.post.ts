@@ -29,6 +29,29 @@ export default defineEventHandler(async (event) => {
   })
 
   runStream
+    .on('event', async (data) => {
+      if (data.event === 'thread.run.requires_action') {
+        const calls = data.data.required_action?.submit_tool_outputs.tool_calls || []
+        for (const call of calls) {
+          if (call.function.name === 'send_email') {
+            await client.beta.threads.runs.submitToolOutputsStream(body.threadId, data.data.id, {
+              tool_outputs: [
+                {
+                  tool_call_id: call.id,
+                  output: '{ "success": true }',
+                },
+              ],
+            })
+              .on('textDelta', (delta) => {
+                responseStream.write(delta.value)
+              })
+              .on('textDone', () => {
+                responseStream.end()
+              })
+          }
+        }
+      }
+    })
     .on('textDelta', (delta) => {
       responseStream.write(delta.value)
     })
