@@ -18,6 +18,8 @@ export default defineNuxtConfig({
     contentfulDeliveryAccessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
     openaiApiKey: process.env.OPENAI_API_KEY,
     assistantId: process.env.OPENAI_ASSITANT_ID,
+    mailgunApiKey: process.env.MAILGUN_API_KEY,
+    mailgunDomain: process.env.MAILGUN_DOMAIN,
     public: {
       backSoon: process.env.PUBLIC_BACK_SOON,
       maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL,
