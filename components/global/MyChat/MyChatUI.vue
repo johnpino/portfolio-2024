@@ -2,11 +2,13 @@
 <template>
   <div class="max-w-[500px]">
     <div
+      ref="scrollableAreaRef"
       class="rich-text max-h-[300px] overflow-y-scroll rounded-t-md bg-slate-50 p-4 flex gap-4 flex-col border border-b-0"
     >
       <div
         v-for="message in messages"
         :key="message.content"
+        ref="messagesRef"
         class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
         :class="message.role === 'user' && 'self-end bg-slate-200'"
         v-html="message.content"
@@ -47,6 +49,7 @@ const { initialMessage } = defineProps<MyChatUIProps>()
 
 const isMounted = ref(false)
 const answerRef = ref<HTMLDivElement>()
+const scrollableAreaRef = ref<HTMLDivElement>()
 const question = ref()
 
 const { sendMessage, answer, isLoading, messages } = useOpenai({ initialMessage })
@@ -54,6 +57,18 @@ const { sendMessage, answer, isLoading, messages } = useOpenai({ initialMessage 
 watch(answer, useThrottle(() => {
   if (answerRef.value) answerRef.value.scrollIntoView({ behavior: 'smooth' })
 }, 200), { deep: true })
+
+watch(
+  messages,
+  async () => {
+    await nextTick()
+
+    if (scrollableAreaRef.value) {
+      scrollableAreaRef.value.scrollTop = scrollableAreaRef.value.scrollHeight
+    }
+  },
+  { deep: true },
+)
 
 const submitHandler = async () => {
   const value = question.value
