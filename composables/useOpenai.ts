@@ -51,31 +51,40 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
       content: message,
     })
 
-    const stream = await fetch('api/create/message',
-      {
-        method: 'post',
-        body: JSON.stringify({
-          message,
-          threadId: threadId.value,
-        }),
-      },
-    )
+    try {
+      const stream = await fetch('api/create/message',
+        {
+          method: 'post',
+          body: JSON.stringify({
+            message,
+            threadId: threadId.value,
+          }),
+        },
+      )
 
-    resolveStream({
-      stream: stream.body,
-      onChunk: (data) => {
-        rawMarkdown += data
-        answer.content = md.render(rawMarkdown)
-      },
-      onReady: () => {
-        messages.push({ ...answer })
-        rawMarkdown = ''
-        answer.content = ''
-      },
-      onStart: () => {
-        isLoading.value = false
-      },
-    })
+      resolveStream({
+        stream: stream.body,
+        onChunk: (data) => {
+          rawMarkdown += data
+          answer.content = md.render(rawMarkdown)
+        },
+        onReady: () => {
+          messages.push({ ...answer })
+          rawMarkdown = ''
+          answer.content = ''
+        },
+        onStart: () => {
+          isLoading.value = false
+        },
+      })
+    }
+    catch {
+      console.log('There was an error sending the message')
+
+      messages.push({ ...answer, content: `${answer.content} <strong>Sorry, there was an error. Please try again.</strong>` })
+      rawMarkdown = ''
+      answer.content = ''
+    }
   }
 
   return { sendMessage, answer, isLoading, messages }
