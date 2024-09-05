@@ -18,6 +18,8 @@ export default defineEventHandler(async (event) => {
   })
 
   try {
+    console.log(`message.post.ts -> creating a run with message: "${body.message}"`)
+
     const runStream = await client.beta.threads.runs.stream(body.threadId, {
       assistant_id: assistantId,
       additional_messages: [
@@ -26,6 +28,10 @@ export default defineEventHandler(async (event) => {
           content: body.message,
         },
       ],
+      truncation_strategy: {
+        type: 'last_messages',
+        last_messages: 7,
+      },
     })
 
     runStream
