@@ -30,6 +30,7 @@ export default defineEventHandler(async (event) => {
 
     runStream
       .on('event', async (data) => {
+        console.log('message.post.ts -> stream event', data.event, data.data)
         if (data.event === 'thread.run.requires_action') {
           const calls = data.data.required_action?.submit_tool_outputs.tool_calls || []
           for (const call of calls) {
@@ -54,6 +55,10 @@ export default defineEventHandler(async (event) => {
                 })
             }
           }
+        }
+        if (data.event === 'thread.run.failed') {
+          responseStream.write('Sorry, something went wrong while trying to help you. Could you please try again? If the problem continues, feel free to ask a different question. I\'m here to assist you!')
+          responseStream.end()
         }
       })
       .on('textDelta', (delta) => {
