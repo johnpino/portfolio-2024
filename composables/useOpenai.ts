@@ -1,40 +1,5 @@
 import markdownit from 'markdown-it'
 
-const resolveStream = async ({
-  onChunk,
-  onReady,
-  onStart,
-  stream,
-}: {
-  onChunk: (data: string) => void
-  onReady: () => void
-  onStart: () => void
-  stream: ReadableStream | null
-}) => {
-  if (!stream) return
-
-  const reader = stream.pipeThrough(new TextDecoderStream()).getReader()
-
-  let onStartCalled = false
-
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    const stream = await reader.read()
-    if (stream.done) break
-
-    const chunk = stream.value
-
-    if (!onStartCalled) {
-      onStart()
-      onStartCalled = true
-    }
-
-    onChunk(chunk)
-  }
-
-  onReady()
-}
-
 const createThread = async (ref: Ref, initialMessage?: string) => {
   const data = await $fetch('api/create/thread', {
     method: 'post',
@@ -45,6 +10,11 @@ const createThread = async (ref: Ref, initialMessage?: string) => {
 
 interface UseOpenaiProps {
   initialMessage?: string
+}
+
+interface Message {
+  role: 'assistant' | 'user'
+  content?: string
 }
 
 export const useOpenai = (props: UseOpenaiProps = {}) => {
@@ -64,17 +34,17 @@ export const useOpenai = (props: UseOpenaiProps = {}) => {
     }
   }
 
-  const messages = reactive<Array<{ role: string, content: string }>>(props.initialMessage ? [{ role: 'assistant', content: props.initialMessage }] : [])
+  const messages = reactive<Array<Message>>(props.initialMessage ? [{ role: 'assistant', content: props.initialMessage }] : [])
 
-  let rawMarkdown = ''
-
-  const answer = reactive({
+  const answer = reactive<Message>({
     role: 'assistant',
     content: '',
   })
 
   const sendMessage = async (message: string) => {
     isLoading.value = true
+
+    let rawMarkdown = ''
 
     messages.push({
       role: 'user',

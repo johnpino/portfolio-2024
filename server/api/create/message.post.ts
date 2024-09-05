@@ -1,10 +1,8 @@
 import OpenAI from 'openai'
-
-import formData from 'form-data'
-import Mailgun from 'mailgun.js'
+import sendEmail from '~/server/utils/sendEmail'
 
 export default defineEventHandler(async (event) => {
-  const { openaiApiKey, assistantId, mailgunApiKey, mailgunDomain } = useRuntimeConfig(event)
+  const { openaiApiKey, assistantId } = useRuntimeConfig(event)
 
   const bodyJSON = await readBody(event)
 
@@ -37,30 +35,16 @@ export default defineEventHandler(async (event) => {
         const calls = data.data.required_action?.submit_tool_outputs.tool_calls || []
         for (const call of calls) {
           if (call.function.name === 'send_email') {
-            const functionArgs = JSON.parse(call.function.arguments)
-
-            const mailgun = new Mailgun(formData)
-
-            const mg = mailgun.client({
-              username: 'api',
-              key: mailgunApiKey,
-            })
-
-            const info = {
-              from: 'Portfolio Online <info@johnpino.me>',
-              to: 'iam@johnpino.me',
-              subject: `New Message from ${functionArgs.senderName}`,
-              text: `${functionArgs.content} ${functionArgs.senderEmail}`,
-            }
+            const { senderName, senderEmail, content } = JSON.parse(call.function.arguments)
 
             try {
-              const mailgunResponse = await mg.messages.create(mailgunDomain, info)
+              const response = await sendEmail(senderName, senderEmail, content)
 
               await client.beta.threads.runs.submitToolOutputsStream(body.threadId, data.data.id, {
                 tool_outputs: [
                   {
                     tool_call_id: call.id,
-                    output: `{ "success": ${mailgunResponse.status === 200 ? 'true' : 'false'} }`,
+                    output: `{ "success": ${response.status === 200 ? 'true' : 'false'} }`,
                   },
                 ],
               })
