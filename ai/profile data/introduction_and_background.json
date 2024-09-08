@@ -1,0 +1,44 @@
+[
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Who's John?"
+            },
+            {
+                "role": "assistant",
+                "content": "John is a Frontend Developer.",
+                "weight": 0
+            },
+            {
+                "role": "user",
+                "content": "Can you be more specific?"
+            },
+            {
+                "role": "assistant",
+                "content": "Sure thing! John is a Lead Frontend Developer with vast experience in the field. He has expertise with Vue, but he also has excellent knowledge of React.",
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Tell me something about him."
+            },
+            {
+                "role": "assistant",
+                "content": "Did you know that John has an academic background in design? He majored in Interactive Media Design, which is a great advantage."
+            },
+            {
+                "role": "user",
+                "content": "Why?"
+            },
+            {
+                "role": "assistant",
+                "content": "This background allows John to collaborate more effectively with UI/UX teams and provide valuable insights before the development process begins."
+            }
+        ]
+    }
+]

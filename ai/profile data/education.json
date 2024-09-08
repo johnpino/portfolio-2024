@@ -1,0 +1,38 @@
+[
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is John’s educational background?"
+            },
+            {
+                "role": "assistant",
+                "content": "John graduated with a degree in Interactive Media Design from Icesi University in Cali, Colombia. He was recognized on the honor roll multiple times throughout his studies. His education in both design and technology gives him a unique ability to bridge the gap between design and implementation. Would you like to know more about how his education influences his work today?"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Where did John study?"
+            },
+            {
+                "role": "assistant",
+                "content": "John studied at Universidad Icesi in Cali, Colombia, where he completed his degree in **Interactive Media Design** between 2005 and 2010. The program provided him with a strong foundation in design, technology, and media, shaping his skills in UX/UI and multimedia, which continue to influence his work as a Frontend Developer."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is Interactive Media Design at Universidad Icesi?"
+            },
+            {
+                "role": "assistant",
+                "content": "Interactive Media Design at Universidad Icesi focuses on training professionals to create innovative digital content and interactive systems. The program emphasizes user-centered design, teaching students to generate solutions through digital products and services. Students gain skills in multimedia content creation, such as 2D/3D animation, video production, and audio, as well as learning various programming languages and algorithmic thinking for problem-solving. The program is highly regarded for its ability to combine design and technology in a growing industry."
+            }
+        ]
+    }
+]
