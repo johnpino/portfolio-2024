@@ -27,6 +27,7 @@
     >
       <textarea
         v-model="question"
+        maxlength="150"
         class="border border-t-0 p-4 resize-none text-sm rounded-sm"
         :disabled="!isMounted"
         :placeholder="!isMounted ? 'Loading...' : inputPlaceholder"
