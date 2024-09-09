@@ -53,7 +53,7 @@ const answerRef = ref<HTMLDivElement>()
 const scrollableAreaRef = ref<HTMLDivElement>()
 const question = ref()
 
-const { sendMessage, answer, isLoading, messages } = useOpenai({ initialMessage })
+const { sendMessage, answer, isLoading, messages } = useAssistant({ initialMessage })
 
 watch(answer, useThrottle(() => {
   if (answerRef.value) answerRef.value.scrollIntoView({ behavior: 'smooth' })

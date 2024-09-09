@@ -17,7 +17,7 @@ interface Message {
   content?: string
 }
 
-export const useOpenai = (props: UseOpenaiProps = {}) => {
+export const useAssistant = (props: UseOpenaiProps = {}) => {
   const md = markdownit({ html: true })
   const isLoading = ref(false)
   const threadId = ref()
