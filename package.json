@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --tunnel true",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -17,8 +17,10 @@
     "contentful:generate-types": "npm run contentful:export && npm run contentful:types"
   },
   "dependencies": {
+    "@contentful/node-apps-toolkit": "^3.8.0",
     "@nuxt/eslint": "^0.5.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@pinecone-database/pinecone": "^3.0.2",
     "@types/contentful-resolve-response": "^0.1.33",
     "contentful": "^10.14.1",
     "contentful-resolve-response": "^1.9.0",

@@ -16,10 +16,12 @@ export default defineNuxtConfig({
     contentfulSpaceID: process.env.CONTENTFUL_SPACE_ID,
     contentfulEnvironment: process.env.CONTENTFUL_ENVIRONMENT,
     contentfulDeliveryAccessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
+    contentfulWebhookSecret: process.env.CONTENTFUL_WEBHOOK_SECRET,
     openaiApiKey: process.env.OPENAI_API_KEY,
     assistantId: process.env.OPENAI_ASSITANT_ID,
     mailgunApiKey: process.env.MAILGUN_API_KEY,
     mailgunDomain: process.env.MAILGUN_DOMAIN,
+    pineconeApiKey: process.env.PINECONE_API_KEY,
     public: {
       backSoon: process.env.PUBLIC_BACK_SOON,
       maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL,
