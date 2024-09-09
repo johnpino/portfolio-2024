@@ -3,7 +3,7 @@ import OpenAI from 'openai'
 import { verifyRequest } from '@contentful/node-apps-toolkit'
 
 export default defineEventHandler(async (event) => {
-  const { openaiApiKey, pineconeApiKey, contentfulWebhookSecret } = useRuntimeConfig(event)
+  const { openaiApiKey, pineconeApiKey, pineconeIndex: index, contentfulWebhookSecret } = useRuntimeConfig(event)
   const body = await readBody(event)
 
   const canonicalRequest = {
@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
     apiKey: pineconeApiKey,
   })
 
-  const pineconeIndex = pineconeClient.Index('professional-profile')
+  const pineconeIndex = pineconeClient.Index(index)
 
   try {
     if (eventType === 'ContentManagement.Entry.publish') {

@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     mailgunApiKey: process.env.MAILGUN_API_KEY,
     mailgunDomain: process.env.MAILGUN_DOMAIN,
     pineconeApiKey: process.env.PINECONE_API_KEY,
+    pineconeIndex: process.env.PINECONE_INDEX,
     public: {
       backSoon: process.env.PUBLIC_BACK_SOON,
       maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL,
