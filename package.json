@@ -22,7 +22,6 @@
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinecone-database/pinecone": "^3.0.2",
     "@types/contentful-resolve-response": "^0.1.33",
-    "contentful": "^10.14.1",
     "contentful-resolve-response": "^1.9.0",
     "markdown-it": "^14.1.0",
     "nuxt": "^3.12.4",
