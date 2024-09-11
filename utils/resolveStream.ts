@@ -32,7 +32,12 @@ export default async ({
     }
 
     for (const chunk of chunks.split('\n')) {
-      if (chunk) onChunk(JSON.parse(chunk))
+      try {
+        if (chunk) onChunk(JSON.parse(chunk))
+      }
+      catch (e) {
+        console.error(`Error parsing chunk: ${chunk} with error: ${e}`)
+      }
     }
   }
 
