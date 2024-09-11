@@ -1,6 +1,6 @@
 import { Pinecone } from '@pinecone-database/pinecone'
 import OpenAI from 'openai'
-import getEntriesById from '~/server/utils/getEntriesById.ts'
+import getEntriesById from '~/server/utils/getEntriesById'
 import type { Message } from '~/types/types'
 
 export default defineEventHandler(async (event) => {
@@ -28,7 +28,9 @@ export default defineEventHandler(async (event) => {
     includeMetadata: true,
   })
 
-  const documents = await getEntriesById({ contentType: 'datasetItem', ids: records.matches.map(match => match.id) })
+  const relevantRecords = records.matches.filter(match => match.score && match.score > 0.3)
+
+  const documents = await getEntriesById({ contentType: 'datasetItem', ids: relevantRecords.map(match => match.id) })
 
   const messages: Array<Message> = []
 

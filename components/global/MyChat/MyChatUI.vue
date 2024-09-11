@@ -7,7 +7,7 @@
     >
       <div
         v-for="message in messages"
-        :key="message.content"
+        :key="message.content?.toString()"
         ref="messagesRef"
         class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
         :class="message.role === 'user' && 'self-end bg-slate-200'"

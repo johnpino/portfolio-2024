@@ -1,5 +1,5 @@
-export interface Message {
-  role: 'assistant' | 'user' | 'system' | 'error'
-  content?: string
+import type OpenAI from 'openai'
+
+export type Message = OpenAI.Chat.Completions.ChatCompletionMessageParam & {
   id?: string
 }

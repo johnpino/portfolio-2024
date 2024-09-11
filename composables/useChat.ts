@@ -26,15 +26,6 @@ export const useChat = (props: UseChatProps) => {
       content: message,
     })
 
-    const _messages = await $fetch('api/create/messages',
-      {
-        method: 'post',
-        body: JSON.stringify({
-          message,
-        }),
-      },
-    )
-
     try {
       const stream = await fetch('api/create/chat',
         {
@@ -64,20 +55,11 @@ export const useChat = (props: UseChatProps) => {
     catch {
       console.log('There was an error creating the chat')
 
-      messages.push({ role: 'error', content: `${answer.content} <strong>Sorry, there was an error. Please try again.</strong>` })
+      messages.push({ role: 'assistant', content: `${answer.content} <strong>Sorry, there was an error. Please try again.</strong>` })
       rawMarkdown = ''
       answer.content = ''
     }
   }
-
-  // Embed the query
-  // Search Vectors in Pinecone
-  // Search info in Contentful
-  // Attach 3 previous messages for context
-  // Attach a role system with info from Contentful
-  // Attach a role user with query
-  // Send the request to OpenAI
-  // Stream the response to the client
 
   return {
     isLoading,

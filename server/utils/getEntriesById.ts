@@ -17,10 +17,7 @@ export default async ({ contentType, limit = 10, ids }: GetEntriesProps) => {
   const data = await $fetch<EntryCollection<EntrySkeletonType>>(url)
 
   if (data.items.length === 0) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: `No items found for content type ${contentType}`,
-    })
+    return []
   }
 
   const resolvedData = resolveResponse(data) as Array<Entry<EntrySkeletonType, 'WITHOUT_LINK_RESOLUTION', ''>>
