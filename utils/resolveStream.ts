@@ -28,6 +28,7 @@ export default async ({
 
     // Buffer the stream
     buffer += stream.value
+    const chunks = buffer.split('\n')
 
     if (!onStartCalled && onStart) {
       onStart()
@@ -36,7 +37,7 @@ export default async ({
 
     console.log('buffer', buffer)
 
-    for (const chunk of buffer.split('\n')) {
+    for (const chunk of chunks) {
       console.log('chunk', chunk)
       console.log('-----------------')
       try {
@@ -46,6 +47,7 @@ export default async ({
         }
       }
       catch (e) {
+        buffer = chunk
         console.log(`Failed to parse chunk: ${chunk}. Error: ${e}`)
       }
     }
