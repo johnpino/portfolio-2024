@@ -29,26 +29,22 @@ export default async ({
     // Buffer the stream
     buffer += stream.value
     const chunks = buffer.split('\n')
+    buffer = ''
 
     if (!onStartCalled && onStart) {
       onStart()
       onStartCalled = true
     }
 
-    console.log('buffer', buffer)
-
     for (const chunk of chunks) {
-      console.log('chunk', chunk)
-      console.log('-----------------')
       try {
         if (chunk) {
           onChunk(JSON.parse(chunk))
-          buffer = ''
         }
       }
-      catch (e) {
+      catch {
+        // If the chunk is not a valid JSON, it's probably a partial message. Keep it in the buffer.
         buffer = chunk
-        console.log(`Failed to parse chunk: ${chunk}. Error: ${e}`)
       }
     }
   }
