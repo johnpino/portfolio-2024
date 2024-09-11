@@ -31,7 +31,11 @@ export default async ({
       onStartCalled = true
     }
 
+    console.log('chunks', chunks)
+
     for (const chunk of chunks.split('\n')) {
+      console.log('chunk', chunk)
+      console.log('-----------------')
       try {
         if (chunk) onChunk(JSON.parse(chunk))
       }
