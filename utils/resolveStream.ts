@@ -19,28 +19,34 @@ export default async ({
 
   let onStartCalled = false
 
+  let buffer = ''
+
   // eslint-disable-next-line no-constant-condition
   while (true) {
     const stream = await reader.read()
     if (stream.done) break
 
-    const chunks = stream.value
+    // Buffer the stream
+    buffer += stream.value
 
     if (!onStartCalled && onStart) {
       onStart()
       onStartCalled = true
     }
 
-    console.log('chunks', chunks)
+    console.log('buffer', buffer)
 
-    for (const chunk of chunks.split('\n')) {
+    for (const chunk of buffer.split('\n')) {
       console.log('chunk', chunk)
       console.log('-----------------')
       try {
-        if (chunk) onChunk(JSON.parse(chunk))
+        if (chunk) {
+          onChunk(JSON.parse(chunk))
+          buffer = ''
+        }
       }
       catch (e) {
-        console.error(`Error parsing chunk: ${chunk} with error: ${e}`)
+        console.log(`Failed to parse chunk: ${chunk}. Error: ${e}`)
       }
     }
   }
