@@ -50,11 +50,9 @@ export const useChat = (props: UseChatProps) => {
         },
         onReady: () => {
           messages.push({ ...answer })
+          isLoading.value = false
           rawMarkdown = ''
           answer.content = ''
-        },
-        onStart: () => {
-          isLoading.value = false
         },
       })
     }

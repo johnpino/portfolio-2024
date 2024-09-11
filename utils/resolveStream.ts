@@ -3,7 +3,7 @@ import type { StreamData } from '~/types/types'
 type ResolveSteamProps = {
   onChunk: (data: StreamData) => void
   onReady: () => void
-  onStart: () => void
+  onStart?: () => void
   stream: ReadableStream | null
 }
 
@@ -26,7 +26,7 @@ export default async ({
 
     const chunks = stream.value
 
-    if (!onStartCalled) {
+    if (!onStartCalled && onStart) {
       onStart()
       onStartCalled = true
     }

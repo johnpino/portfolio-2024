@@ -14,10 +14,10 @@
         v-html="message.content"
       />
       <div
-        v-if="answer.content || isLoading"
+        v-if="isLoading || answer.content"
         ref="answerRef"
         class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
-        v-html="isLoading ? '...' : answer.content"
+        v-html=" answer.content ? answer.content : '...'"
       />
     </div>
     <form
