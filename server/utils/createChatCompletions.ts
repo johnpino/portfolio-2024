@@ -14,6 +14,9 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
     apiKey: openaiApiKey,
   })
 
+  // Filter out assistant messages with a tool call property, or tool messages.
+  const systemMessages: Array<Message> = messages.filter(message => (message.role === 'assistant' && message.tool_calls) || message.role === 'tool')
+
   console.log('createChatCompletions -> creating a chat completion')
 
   try {
@@ -30,11 +33,6 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
     const toolCalls: Array<{ id: string, name: string, args: string }> = []
 
     for await (const chunk of chatCompletionStream) {
-      // console.log(chunk)
-      // console.log(chunk.choices[0]?.delta)
-      // console.log(chunk.choices[0]?.delta.tool_calls && chunk.choices[0].delta.tool_calls[0].function)
-      // console.log('-----------------------------------')
-
       if (chunk.choices[0]?.delta.tool_calls) {
         for (const toolCall of chunk.choices[0].delta.tool_calls) {
           const argumentChunk = toolCall.function?.arguments || ''
@@ -86,12 +84,21 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
               }
             }
           }
-          createChatCompletions({ messages: [...messages, toolRequest, ...toolResults], stream })
+          return createChatCompletions({ messages: [...messages, toolRequest, ...toolResults], stream })
         }
+
         if (chunk.choices[0].finish_reason !== 'stop') {
-          stream.write(chunk.choices[0].delta.content ?? '')
+          stream.write(JSON.stringify({
+            type: 'message',
+            content: chunk.choices[0].delta.content ?? '',
+          }) + '\n')
         }
-        else {
+
+        if (chunk.choices[0].finish_reason === 'stop') {
+          stream.write(JSON.stringify({
+            type: 'system',
+            content: systemMessages,
+          }))
           stream.end()
         }
       }
@@ -117,7 +124,10 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
       console.log('Unknown error type:', error)
     }
 
-    stream.write('There was an error. Please try later.')
+    stream.write(JSON.stringify({
+      type: 'message',
+      content: 'There was an error. Please try later.',
+    }))
     stream.end()
   }
 }

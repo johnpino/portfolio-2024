@@ -1,14 +1,18 @@
+import type { StreamData } from '~/types/types'
+
+type ResolveSteamProps = {
+  onChunk: (data: StreamData) => void
+  onReady: () => void
+  onStart: () => void
+  stream: ReadableStream | null
+}
+
 export default async ({
   onChunk,
   onReady,
   onStart,
   stream,
-}: {
-  onChunk: (data: string) => void
-  onReady: () => void
-  onStart: () => void
-  stream: ReadableStream | null
-}) => {
+}: ResolveSteamProps) => {
   if (!stream) return
 
   const reader = stream.pipeThrough(new TextDecoderStream()).getReader()
@@ -20,14 +24,16 @@ export default async ({
     const stream = await reader.read()
     if (stream.done) break
 
-    const chunk = stream.value
+    const chunks = stream.value
 
     if (!onStartCalled) {
       onStart()
       onStartCalled = true
     }
 
-    onChunk(chunk)
+    for (const chunk of chunks.split('\n')) {
+      if (chunk) onChunk(JSON.parse(chunk))
+    }
   }
 
   onReady()

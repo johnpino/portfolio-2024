@@ -39,8 +39,14 @@ export const useChat = (props: UseChatProps) => {
       resolveStream({
         stream: stream.body,
         onChunk: (data) => {
-          rawMarkdown += data
-          answer.content = md.render(rawMarkdown)
+          if (data.type === 'system') {
+            messages.push(...data.content)
+          }
+
+          if (data.type === 'message') {
+            rawMarkdown += data.content
+            answer.content = md.render(rawMarkdown)
+          }
         },
         onReady: () => {
           messages.push({ ...answer })

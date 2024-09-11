@@ -6,7 +6,7 @@
       class="rich-text max-h-[300px] overflow-y-scroll rounded-t-md bg-slate-50 p-4 flex gap-4 flex-col border border-b-0"
     >
       <div
-        v-for="message in messages"
+        v-for="message in messagesUI"
         :key="message.content?.toString()"
         ref="messagesRef"
         class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
@@ -54,6 +54,8 @@ const scrollableAreaRef = ref<HTMLDivElement>()
 const question = ref()
 
 const { sendMessage, answer, isLoading, messages } = useChat({ initialMessage })
+
+const messagesUI = computed(() => messages.filter(message => message.role === 'user' || (message.role === 'assistant' && !message.tool_calls)))
 
 watch(answer, useThrottle(() => {
   if (answerRef.value) answerRef.value.scrollIntoView({ behavior: 'smooth' })

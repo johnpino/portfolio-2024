@@ -3,7 +3,7 @@ import type { Message } from '~/types/types'
 
 export default defineEventHandler(async (event) => {
   const bodyJSON = await readBody(event)
-  const body = JSON.parse(bodyJSON)
+  const { messages } = JSON.parse(bodyJSON)
 
   const responseStream = event.node.res
 
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   }
 
   createChatCompletions({
-    messages: [instructions, ...body.messages],
+    messages: [instructions, ...messages],
     stream: responseStream,
   })
 })
