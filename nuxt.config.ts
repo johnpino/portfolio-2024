@@ -3,11 +3,6 @@
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
-  vite: {
-    define: {
-      __VUE_PROD_DEVTOOLS__: true,
-    },
-  },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
