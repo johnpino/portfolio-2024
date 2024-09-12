@@ -72,13 +72,24 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
                 const { searchQuery } = JSON.parse(toolCall.args)
                 const vectors = await createEmbedding({ message: searchQuery })
                 const records = await queryVectorDB({ vectors })
-                const documents = await getEntriesById({ contentType: 'datasetItem', ids: records.map(match => match.id) })
+
+                const existingDocumentIds: Array<string> = messages
+                  .filter(message => message.role === 'tool')
+                  .map(message => JSON.parse(message.content as string).id)
+
+                // Filter out documents that have already been sent to the user.
+                const filteredRecords = records.filter(record => !existingDocumentIds.includes(record.id))
+
+                const documents = await getEntriesById({ contentType: 'datasetItem', ids: filteredRecords.map(match => match.id) })
 
                 toolResults.push({
                   role: 'tool',
-                  content: JSON.stringify({
-                    context: documents.map(document => document.fields.content).join('\n'),
-                  }),
+                  content: JSON.stringify([
+                    documents.map(document => ({
+                      id: document.sys.id,
+                      content: document.fields.content,
+                    })),
+                  ]),
                   tool_call_id: toolCall.id,
                 })
                 break
