@@ -17,7 +17,7 @@
         v-if="isLoading || answer.content"
         ref="answerRef"
         class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
-        v-html=" answer.content ? answer.content : '...'"
+        v-html=" answer.content ? answer.content : loadingLabel"
       />
     </div>
     <form
@@ -73,11 +73,29 @@ watch(
   { deep: true },
 )
 
+// Adjust loading label based on loading state
+watch(isLoading, (newVal) => {
+  let timeoutId
+
+  if (!newVal) {
+    clearTimeout(timeoutId)
+    loadingLabel.value = '...'
+  }
+
+  if (newVal) {
+    timeoutId = setTimeout(() => {
+      loadingLabel.value = 'This might take a moment, please hang tight...'
+    }, 2000)
+  }
+})
+
 const submitHandler = async () => {
   const value = question.value
   question.value = null
   await sendMessage(value)
 }
+
+const loadingLabel = ref('...')
 
 onMounted(() => {
   isMounted.value = true
