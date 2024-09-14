@@ -1,8 +1,8 @@
 import type { FunctionalComponent } from 'vue'
 
-import { MyHeroUI } from '#components'
 import type { TypeHero } from 'contentful-types'
 import type { MyHeroUIProps } from './MyHeroUIProps'
+import { MyHeroUI } from '#components'
 
 /**
  *
@@ -10,12 +10,12 @@ import type { MyHeroUIProps } from './MyHeroUIProps'
  * @returns The Vue UI component with transformed data
  */
 const MyDisabled: FunctionalComponent<TypeHero<'WITHOUT_UNRESOLVABLE_LINKS', ''>> = (
-  props
+  props,
 ) => {
   const dataUI: MyHeroUIProps = {
     title: props.fields.title,
     subtitle: props.fields.subtitle,
-    description: props.fields.description
+    description: props.fields.description,
   }
 
   return (
