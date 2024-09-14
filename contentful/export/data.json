@@ -1945,7 +1945,7 @@
         "id": "zI8cKD26qePNXwfHCoBEY",
         "type": "Entry",
         "createdAt": "2024-09-03T14:32:56.908Z",
-        "updatedAt": "2024-09-14T18:28:09.313Z",
+        "updatedAt": "2024-09-14T19:15:32.004Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1953,8 +1953,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 33,
-        "publishedAt": "2024-09-14T18:28:09.313Z",
+        "publishedVersion": 51,
+        "publishedAt": "2024-09-14T19:15:32.004Z",
         "firstPublishedAt": "2024-09-03T14:33:10.236Z",
         "createdBy": {
           "sys": {
@@ -1970,8 +1970,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 9,
-        "version": 34,
+        "publishedCounter": 16,
+        "version": 52,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2003,10 +2003,10 @@
           "en-US": "Ask Johnny"
         },
         "initialMessage": {
-          "en-US": "Hey! This is <strong>Johnny</strong>. Let me know if I can help you."
+          "en-US": "Hi! I’m <strong>Summer</strong>, John's assistant. I can help you explore his experience and skills. Ask me anything!"
         },
         "inputPlaceholder": {
-          "en-US": "Ask Johnny..."
+          "en-US": "Ask Summer about John’s work, skills..."
         },
         "predefinedQueries": {
           "en-US": [
