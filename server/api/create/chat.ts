@@ -3,7 +3,7 @@ import type { Message } from '~/types/types'
 
 export default defineEventHandler(async (event) => {
   const bodyJSON = await readBody(event)
-  const { messages } = JSON.parse(bodyJSON)
+  const { messages }: { messages: Array<Message> } = JSON.parse(bodyJSON)
 
   const responseStream = event.node.res
 

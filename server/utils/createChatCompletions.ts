@@ -1,6 +1,7 @@
 import OpenAI from 'openai'
-import { getContext, sendEmail } from '~/ai/tools'
+import { getContext, sendEmail, createCV } from '~/ai/tools'
 import sendEmailUtility from '~/server/utils/sendEmail'
+import createCVUtility from '~/server/utils/createCV'
 import type { Message } from '~/types/types'
 
 type CreateChatCompletionProps = {
@@ -24,7 +25,7 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
     const chatCompletionStream = await openAIClient.chat.completions.create({
       model: 'gpt-4o-mini',
       messages,
-      tools: [getContext, sendEmail],
+      tools: [getContext, sendEmail, createCV],
       stream: true,
       stream_options: {
         include_usage: true,
@@ -107,6 +108,19 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
                   tool_call_id: toolCall.id,
                 })
                 break
+              }
+              case 'createCV': {
+                const { markdownContent } = JSON.parse(toolCall.args)
+
+                const data = await createCVUtility({ markdownContent })
+
+                toolResults.push({
+                  role: 'tool',
+                  content: JSON.stringify({
+                    ...data,
+                  }),
+                  tool_call_id: toolCall.id,
+                })
               }
             }
           }

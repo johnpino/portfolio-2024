@@ -33,4 +33,13 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  nitro: {
+    vercel: {
+      functions: {
+        'api/create/chat.ts': {
+          maxDuration: 20,
+        },
+      },
+    },
+  },
 })
