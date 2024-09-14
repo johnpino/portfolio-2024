@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     mailgunDomain: process.env.MAILGUN_DOMAIN,
     pineconeApiKey: process.env.PINECONE_API_KEY,
     pineconeIndex: process.env.PINECONE_INDEX,
+    pdfShiftApiKey: process.env.PDFSHIFT_API_KEY,
     public: {
       backSoon: process.env.PUBLIC_BACK_SOON,
       maintenanceUrl: process.env.PUBLIC_MAINTENANCE_URL,
@@ -41,5 +42,11 @@ export default defineNuxtConfig({
         },
       },
     },
+    serverAssets: [
+      {
+        baseName: 'templates',
+        dir: './assets/templates',
+      },
+    ],
   },
 })
