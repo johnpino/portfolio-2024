@@ -118,6 +118,7 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
                   role: 'tool',
                   content: JSON.stringify({
                     ...data,
+                    url: `<a href='${data.url}' target='_blank'>Label</a>`,
                   }),
                   tool_call_id: toolCall.id,
                 })
