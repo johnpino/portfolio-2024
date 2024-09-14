@@ -54,7 +54,7 @@
                     @click="sendQuery(query)"
                   >
                     <span class="px-3">{{ query.value }}</span>
-                    <div class="p-3 border-l border-solid border-slate-100 bg-slate-200 group-disabled:bg-slate-50 group-hover:bg-rose-500 group-hover:text-white  rounded-tr-sm rounder-br-sm transition-all">
+                    <div class="p-3 border-l border-solid border-slate-100 bg-slate-200 group-disabled:bg-slate-50 group-hover:bg-rose-50 rounded-tr-sm rounder-br-sm transition-all">
                       <Icon
                         name="fa6-regular:paper-plane"
                         mode="svg"
@@ -66,12 +66,12 @@
             </div>
           </template>
           <button
-            class="w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200 flex items-center flex-shrink-0 transition-all group"
+            class="w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200 flex items-center flex-shrink-0 transition-all hover:bg-rose-700"
             type="submit"
             :disabled="isLoading || !isMounted"
           >
             <span class="px-3">{{ send }}</span>
-            <div class="p-3 border-l border-solid border-rose-100 group-hover:bg-rose-700 rounded-tr-sm rounded-br-sm transition-all">
+            <div class="p-3 border-l border-solid border-rose-300 rounded-tr-sm rounded-br-sm transition-all">
               <Icon
                 name="fa6-regular:paper-plane"
                 mode="svg"
