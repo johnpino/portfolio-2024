@@ -1,8 +1,8 @@
 import type { FunctionalComponent } from 'vue'
 
-import { MyChatUI } from '#components'
 import type { TypeChat } from 'contentful-types'
 import type { MyChatUIProps } from './MyChatUIProps'
+import { MyChatUI } from '#components'
 
 /**
  *
@@ -10,12 +10,13 @@ import type { MyChatUIProps } from './MyChatUIProps'
  * @returns The Vue UI component with transformed data
  */
 const MyChat: FunctionalComponent<TypeChat<'WITHOUT_UNRESOLVABLE_LINKS', ''>> = (
-  props
+  props,
 ) => {
   const dataUI: MyChatUIProps = {
     send: props.fields.send,
     initialMessage: props.fields.initialMessage,
-    inputPlaceholder: props.fields.inputPlaceholder
+    inputPlaceholder: props.fields.inputPlaceholder,
+    predefinedQueries: props.fields.predefinedQueries,
   }
 
   return (

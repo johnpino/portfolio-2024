@@ -26,6 +26,7 @@ export default async ({ markdownContent }: CreateCVProps) => {
         source: content,
         format: 'Letter',
         margin: '40px 60px',
+        sandbox: true,
       }),
     })
 

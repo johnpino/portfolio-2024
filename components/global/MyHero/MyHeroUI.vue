@@ -3,7 +3,7 @@
     <h1 class="text-5xl lg:text-6xl font-bold mb-8">
       {{ title }}
     </h1>
-    <h2 class="text-base">
+    <h2 class="text-base text-gray-600">
       {{ subtitle }}
     </h2>
     <p

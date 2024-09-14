@@ -12,7 +12,7 @@
         "id": "hero",
         "type": "ContentType",
         "createdAt": "2023-06-10T22:44:02.011Z",
-        "updatedAt": "2024-09-03T14:10:50.698Z",
+        "updatedAt": "2024-09-14T18:55:30.935Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2024-09-03T14:10:50.698Z",
+        "publishedVersion": 11,
+        "publishedAt": "2024-09-14T18:55:30.935Z",
         "firstPublishedAt": "2023-06-10T22:44:02.390Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 5,
-        "version": 10,
+        "publishedCounter": 6,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -79,7 +79,7 @@
           "name": "Description",
           "type": "Symbol",
           "localized": false,
-          "required": true,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -393,7 +393,7 @@
         "id": "chat",
         "type": "ContentType",
         "createdAt": "2024-09-03T14:32:16.823Z",
-        "updatedAt": "2024-09-03T16:33:01.206Z",
+        "updatedAt": "2024-09-14T18:27:14.735Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -401,8 +401,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-09-03T16:33:01.206Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-09-14T18:27:14.735Z",
         "firstPublishedAt": "2024-09-03T14:32:17.447Z",
         "createdBy": {
           "sys": {
@@ -418,8 +418,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -476,11 +476,486 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "predefinedQueries",
+          "name": "Predefined Queries",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "datasetItem",
+        "type": "ContentType",
+        "createdAt": "2024-09-09T01:55:25.083Z",
+        "updatedAt": "2024-09-11T22:23:16.401Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2024-09-11T22:23:16.401Z",
+        "firstPublishedAt": "2024-09-09T01:55:25.566Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/content_types/datasetItem"
+      },
+      "displayField": "content",
+      "name": "Dataset Item",
+      "description": "",
+      "fields": [
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ],
+      "metadata": {
+        "taxonomy": [
+        ]
+      }
     }
   ],
   "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "education",
+        "type": "Tag",
+        "createdAt": "2024-09-11T21:02:59.435Z",
+        "updatedAt": "2024-09-11T21:02:59.435Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Education"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "introductionAndBackground",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:25:07.925Z",
+        "updatedAt": "2024-09-11T22:25:07.925Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Introduction and Background"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "hobbies",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:26:04.843Z",
+        "updatedAt": "2024-09-11T22:26:04.843Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Hobbies"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "miscellaneous",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:26:35.039Z",
+        "updatedAt": "2024-09-11T22:26:35.039Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Miscellaneous"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "workExperience",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:27:03.818Z",
+        "updatedAt": "2024-09-11T22:27:03.818Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Work Experience"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "workPreferences",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:27:10.612Z",
+        "updatedAt": "2024-09-11T22:27:10.612Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Work Preferences"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "leadershipMentorship",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:27:45.129Z",
+        "updatedAt": "2024-09-11T22:27:45.129Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Leadership & Mentorship"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "projects",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:27:56.680Z",
+        "updatedAt": "2024-09-11T22:27:56.680Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Projects"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "softSkills",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:28:07.573Z",
+        "updatedAt": "2024-09-11T22:28:07.573Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Soft Skills"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "skillsTechnologies",
+        "type": "Tag",
+        "createdAt": "2024-09-11T22:28:21.974Z",
+        "updatedAt": "2024-09-11T22:28:21.974Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "Skills & Technologies"
+    }
   ],
   "editorInterfaces": [
     {
@@ -494,7 +969,7 @@
             "linkType": "Space"
           }
         },
-        "version": 10,
+        "version": 12,
         "createdAt": "2023-06-10T22:44:02.508Z",
         "createdBy": {
           "sys": {
@@ -503,7 +978,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-09-03T14:10:51.843Z",
+        "updatedAt": "2024-09-14T18:55:31.633Z",
         "updatedBy": {
           "sys": {
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
@@ -892,7 +1367,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 16,
         "createdAt": "2024-09-03T14:32:17.662Z",
         "createdBy": {
           "sys": {
@@ -901,7 +1376,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-09-03T16:33:01.898Z",
+        "updatedAt": "2024-09-14T18:27:15.324Z",
         "updatedBy": {
           "sys": {
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
@@ -943,6 +1418,88 @@
         {
           "fieldId": "inputPlaceholder",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "predefinedQueries",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "yejtaz3k5m36",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 37,
+        "createdAt": "2024-09-09T01:55:25.792Z",
+        "createdBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-09-11T22:39:14.956Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "datasetItem",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "3iszK8Gl7aaxLvxGyCOhgA",
+          "widgetNamespace": "app"
+        },
+        {
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "content",
+          "widgetId": "multipleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -1039,7 +1596,7 @@
         "id": "6ihR56PU6a27kW1Btq0W2m",
         "type": "Entry",
         "createdAt": "2023-06-10T23:53:45.627Z",
-        "updatedAt": "2024-09-03T14:24:12.676Z",
+        "updatedAt": "2024-09-14T18:55:41.591Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1047,8 +1604,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2024-09-03T14:24:12.676Z",
+        "publishedVersion": 13,
+        "publishedAt": "2024-09-14T18:55:41.591Z",
         "firstPublishedAt": "2024-09-03T14:16:34.918Z",
         "createdBy": {
           "sys": {
@@ -1064,8 +1621,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 2,
-        "version": 12,
+        "publishedCounter": 3,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1095,9 +1652,6 @@
         },
         "subtitle": {
           "en-US": "Senior Frontend Developer @ Valtech | Vue & Contentful Specialist | UI/UX-Driven Frontend"
-        },
-        "description": {
-          "en-US": "This portfolio is still under development, but feel free to ask Johnny for more information about my skills and projects."
         }
       }
     },
@@ -1202,7 +1756,7 @@
         "id": "2gVxJIZ8iZDO5DGzTke1IE",
         "type": "Entry",
         "createdAt": "2023-06-11T17:26:12.529Z",
-        "updatedAt": "2024-09-03T14:33:57.284Z",
+        "updatedAt": "2024-09-03T17:53:34.132Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1210,8 +1764,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 22,
-        "publishedAt": "2024-09-03T14:33:57.284Z",
+        "publishedVersion": 27,
+        "publishedAt": "2024-09-03T17:53:34.132Z",
         "firstPublishedAt": "2023-06-11T17:26:37.415Z",
         "createdBy": {
           "sys": {
@@ -1227,8 +1781,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 9,
-        "version": 23,
+        "publishedCounter": 10,
+        "version": 28,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1254,10 +1808,13 @@
       },
       "fields": {
         "title": {
-          "en-US": "Home"
+          "en-US": "From the Desk of John Pino | Senior Frontend Developer | Vue & Contentful Specialist | UI/UX-Driven Frontend"
         },
         "slug": {
           "en-US": "/"
+        },
+        "description": {
+          "en-US": "As a seasoned Senior Frontend Developer at Valtech, I specialize in building high-performance, user-centric web applications using Vue.js, Contentful, and Contentstack. My strong background in frontend technologies allows me to create seamless, responsive interfaces that elevate user experience. I have a proven track record of delivering scalable solutions that integrate smoothly with headless CMS platforms, ensuring flexibility and robust content management.\n\nIn addition to my technical expertise, I am passionate about staying ahead of the curve in the ever-evolving frontend landscape. My commitment to continuous learning and innovation drives my ability to tackle complex challenges and deliver cutting-edge solutions. Whether working independently or collaborating with cross-functional teams, I prioritize code quality, performance, and maintainability to build applications that stand the test of time."
         },
         "features": {
           "en-US": [
@@ -1388,7 +1945,7 @@
         "id": "zI8cKD26qePNXwfHCoBEY",
         "type": "Entry",
         "createdAt": "2024-09-03T14:32:56.908Z",
-        "updatedAt": "2024-09-03T16:33:11.807Z",
+        "updatedAt": "2024-09-14T18:28:09.313Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1396,8 +1953,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2024-09-03T16:33:11.807Z",
+        "publishedVersion": 33,
+        "publishedAt": "2024-09-14T18:28:09.313Z",
         "firstPublishedAt": "2024-09-03T14:33:10.236Z",
         "createdBy": {
           "sys": {
@@ -1413,8 +1970,8 @@
             "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
           }
         },
-        "publishedCounter": 3,
-        "version": 11,
+        "publishedCounter": 9,
+        "version": 34,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1446,10 +2003,5120 @@
           "en-US": "Ask Johnny"
         },
         "initialMessage": {
-          "en-US": "Hola! Soy Johnny, ¿cómo te puedo ayudar?"
+          "en-US": "Hey! This is <strong>Johnny</strong>. Let me know if I can help you."
         },
         "inputPlaceholder": {
           "en-US": "Ask Johnny..."
+        },
+        "predefinedQueries": {
+          "en-US": [
+            "What is John's tech stack?",
+            "Tell me about his work experience",
+            "Send an email to John"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "introductionAndBackground"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "5forgtgys68uXeAmZhYKec",
+        "type": "Entry",
+        "createdAt": "2024-09-11T06:37:21.958Z",
+        "updatedAt": "2024-09-11T22:25:12.902Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 18,
+        "publishedAt": "2024-09-11T22:25:12.902Z",
+        "firstPublishedAt": "2024-09-11T06:37:38.756Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 19,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/5forgtgys68uXeAmZhYKec"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is a Lead Frontend Developer with vast experience in the field. He has expertise with Vue, but he also has excellent knowledge of React."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "education"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "1y655T8TvOztCoVkKWtZ53",
+        "type": "Entry",
+        "createdAt": "2024-09-11T06:38:30.634Z",
+        "updatedAt": "2024-09-11T22:28:41.333Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-09-11T22:28:41.333Z",
+        "firstPublishedAt": "2024-09-11T06:39:01.973Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/1y655T8TvOztCoVkKWtZ53"
+      },
+      "fields": {
+        "content": {
+          "en-US": "He majored in Interactive Media Design, which is a great advantage. This background allows John to collaborate more effectively with UI/UX teams and provide valuable insights before the development process begins."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "education"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7t6aZLfTy5JGtKLJ8fFnAh",
+        "type": "Entry",
+        "createdAt": "2024-09-11T06:39:09.170Z",
+        "updatedAt": "2024-09-11T22:16:36.829Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-09-11T22:16:36.829Z",
+        "firstPublishedAt": "2024-09-11T06:39:23.462Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7t6aZLfTy5JGtKLJ8fFnAh"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John graduated with a degree in Interactive Media Design from Icesi University in Cali, Colombia. He was recognized on the honor roll multiple times throughout his studies. His education in both design and technology gives him a unique ability to bridge the gap between design and implementation. Would you like to know more about how his education influences his work today?"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "education"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "25KDQ6HwwyAPzfANu8tq0L",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:29:13.751Z",
+        "updatedAt": "2024-09-11T22:29:22.406Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T22:29:22.406Z",
+        "firstPublishedAt": "2024-09-11T22:29:22.406Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/25KDQ6HwwyAPzfANu8tq0L"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Interactive Media Design at Universidad Icesi focuses on training professionals to create innovative digital content and interactive systems. The program emphasizes user-centered design, teaching students to generate solutions through digital products and services. Students gain skills in multimedia content creation, such as 2D/3D animation, video production, and audio, as well as learning various programming languages and algorithmic thinking for problem-solving. The program is highly regarded for its ability to combine design and technology in a growing industry."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hobbies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "qBaZLJWDOVag9yDDyGyLM",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:29:53.565Z",
+        "updatedAt": "2024-09-11T22:35:51.518Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T22:35:51.518Z",
+        "firstPublishedAt": "2024-09-11T22:35:51.518Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/qBaZLJWDOVag9yDDyGyLM"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John's passion for photography enhances his keen eye for design, particularly in frontend development and UX/UI. His experience with composition, lighting, and visual storytelling through photography helps him create visually appealing user interfaces that provide a better user experience. This creative skill supports his work as a frontend developer by ensuring that his designs are both functional and aesthetically pleasing."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "education"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2vn59IhLc3bwKssDdqb4JZ",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:34:30.863Z",
+        "updatedAt": "2024-09-11T22:34:43.312Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T22:34:43.312Z",
+        "firstPublishedAt": "2024-09-11T22:34:43.312Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2vn59IhLc3bwKssDdqb4JZ"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John studied at Universidad Icesi in Cali, Colombia, where he completed his degree in **Interactive Media Design** between 2005 and 2010. The program provided him with a strong foundation in design, technology, and media, shaping his skills in UX/UI and multimedia, which continue to influence his work as a Frontend Developer."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hobbies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7tXSUmmhGk0tdLmI7S4qYB",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:35:08.667Z",
+        "updatedAt": "2024-09-11T23:27:43.272Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-09-11T23:27:43.272Z",
+        "firstPublishedAt": "2024-09-11T22:35:18.237Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7tXSUmmhGk0tdLmI7S4qYB"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John enjoys photography, reading about new technologies, and occasional swimming. These hobbies not only provide him with relaxation and creative outlets but also enhance his professional work in unique ways."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hobbies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7w2GDmIs5z6T8dX8fDDhef",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:41:55.929Z",
+        "updatedAt": "2024-09-11T22:46:01.933Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T22:46:01.933Z",
+        "firstPublishedAt": "2024-09-11T22:46:01.933Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7w2GDmIs5z6T8dX8fDDhef"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is always reading about the latest trends and advancements in technology, especially in areas like AI, web development, and CMS platforms like Contentful. This keeps him updated with industry changes and allows him to adopt cutting-edge tools and methodologies in his work. His passion for learning new technologies helped him successfully integrate AI into his online portfolio and deliver innovative solutions in projects like the social network PoC."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hobbies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6gU6MGmVab3YkCawRQ16id",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:46:17.431Z",
+        "updatedAt": "2024-09-11T22:46:37.849Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-09-11T22:46:37.849Z",
+        "firstPublishedAt": "2024-09-11T22:46:31.956Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6gU6MGmVab3YkCawRQ16id"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Swimming helps John maintain a healthy work-life balance by providing a physical activity that clears his mind and keeps him energized. It’s also a great way for him to destress and refresh his focus, which boosts his productivity and creativity when tackling complex problems in his development projects."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hobbies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "1fzgBVlrMzODFdqvV71WUJ",
+        "type": "Entry",
+        "createdAt": "2024-09-11T22:46:43.236Z",
+        "updatedAt": "2024-09-11T22:47:09.434Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T22:47:09.434Z",
+        "firstPublishedAt": "2024-09-11T22:47:09.434Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/1fzgBVlrMzODFdqvV71WUJ"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Traveling exposes John to different cultures, perspectives, and design aesthetics, which inspire his creative thinking. It helps him stay adaptable and open-minded, qualities that are important when working in dynamic environments like web development. His exposure to global trends and user experiences also influences how he approaches UX/UI design, making his work more versatile and globally appealing."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "leadershipMentorship"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "IuCIsiztw7GAr9mAM0Y1M",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:18:32.924Z",
+        "updatedAt": "2024-09-11T23:27:08.496Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-11T23:27:08.496Z",
+        "firstPublishedAt": "2024-09-11T23:19:21.364Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/IuCIsiztw7GAr9mAM0Y1M"
+      },
+      "fields": {
+        "content": {
+          "en-US": "At Studio F, John led all frontend processes, including a complete refactor of their e-commerce frontend using the latest technologies available at the time. This resulted in fewer complaints about user experience issues and significantly improved the website's performance. John also set the foundation for version control using GitHub and standardized frontend workflows to ensure smoother development processes."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "leadershipMentorship"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "1pz1KXExqnj4PTwvAFnMvy",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:19:29.316Z",
+        "updatedAt": "2024-09-11T23:26:52.427Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-11T23:26:52.427Z",
+        "firstPublishedAt": "2024-09-11T23:19:46.661Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/1pz1KXExqnj4PTwvAFnMvy"
+      },
+      "fields": {
+        "content": {
+          "en-US": "At Keyrus, John led a new project for an existing client, helping to set the architecture and guiding the team through its early phases. Although his time at Keyrus was short, his leadership helped establish a solid foundation for the project's technical direction."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "leadershipMentorship"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6HT3mp79MgfEucimeNGPux",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:20:03.517Z",
+        "updatedAt": "2024-09-11T23:26:35.420Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-09-11T23:26:35.420Z",
+        "firstPublishedAt": "2024-09-11T23:20:12.425Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6HT3mp79MgfEucimeNGPux"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has been deeply involved in leadership at Valtech. He built the architecture for a new client using Nuxt, Vue, Server-Side Rendering (SSR), TailwindCSS, and Contentful as the CMS. He also developed the composable for communicating with Contentful APIs. John is responsible for leading and mentoring 2 junior and 1 mid-senior frontend developers, making sure they are comfortable with their tasks, tracking their progress, and guiding them through any challenges. He also communicates high-level decisions and ensures the team stays aligned with Valtech's goals. Additionally, John supports students at Fundación Pescar through Valtech, providing technical training, conferences, and sharing personal experiences to help them prepare for their professional lives."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "leadershipMentorship"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2qdoSQHJ3fB2NQITc3gIM0",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:20:35.808Z",
+        "updatedAt": "2024-09-11T23:26:16.375Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-11T23:26:16.375Z",
+        "firstPublishedAt": "2024-09-11T23:20:52.609Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2qdoSQHJ3fB2NQITc3gIM0"
+      },
+      "fields": {
+        "content": {
+          "en-US": "At Valtech, John has led several conferences and training sessions on TailwindCSS, Vue.js, and Contentful. These sessions were designed to help his colleagues understand these technologies better and apply them effectively in their projects. John enjoys sharing his knowledge and empowering others to grow."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "leadershipMentorship"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "FkLoNo0ghr3rOFv5ZAGh6",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:21:04.885Z",
+        "updatedAt": "2024-09-11T23:21:11.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:21:11.138Z",
+        "firstPublishedAt": "2024-09-11T23:21:11.138Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/FkLoNo0ghr3rOFv5ZAGh6"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John begins by assessing the junior developer's prior knowledge and identifying their interests. He breaks down complex concepts into smaller, manageable chunks, using references to simpler technologies to help explain them. He also gives them creative freedom by allowing them to choose a final project that demonstrates their understanding. John believes empathy and open communication are key in mentorship."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "leadershipMentorship"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "5NsHfrgebFnhcCU1wYZF6m",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:21:31.088Z",
+        "updatedAt": "2024-09-11T23:21:38.809Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:21:38.809Z",
+        "firstPublishedAt": "2024-09-11T23:21:38.809Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/5NsHfrgebFnhcCU1wYZF6m"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John takes a structured yet flexible approach to mentoring. He believes that each developer learns in their own way, so he begins by assessing the mentee's current skill level and understanding their career goals. For junior developers, he starts with the basics, often breaking down complex topics like state management, component architecture, or performance optimization into smaller, actionable tasks. He guides them step-by-step, ensuring that they can implement what they’ve learned in real-world scenarios. John also focuses on fostering creativity, allowing mentees to choose projects or tasks that align with their interests, while ensuring that these tasks contribute to the overall project objectives. His mentorship has been particularly impactful at Valtech, where he has mentored 2 junior and 1 mid-senior developer."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "1gfHdWHpbICVa2Sjy2r0Bp",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:24:34.267Z",
+        "updatedAt": "2024-09-11T23:24:58.912Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-11T23:24:58.912Z",
+        "firstPublishedAt": "2024-09-11T23:24:58.912Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/1gfHdWHpbICVa2Sjy2r0Bp"
+      },
+      "fields": {
+        "content": {
+          "en-US": "\"What's John biggest challenge? John shared his experience from his time at Studio F. When he joined, there were no other frontend developers, and he had to overcome many misconceptions about the frontend field, particularly regarding delivery timelines and the feasibility of certain tasks. This experience helped John get better at communicating and set him on the path to becoming a leader."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6HOycfHSOOYJDQLpKhT1Fw",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:25:08.942Z",
+        "updatedAt": "2024-09-11T23:25:28.836Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T23:25:28.836Z",
+        "firstPublishedAt": "2024-09-11T23:25:28.836Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6HOycfHSOOYJDQLpKhT1Fw"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is multilingual. He speaks Spanish natively, English at a professional level, and French at a B1/B2 level. His language skills are a great asset when working with international clients."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "Mvpd66uT7AmpbqwjeBSJs",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:30:47.169Z",
+        "updatedAt": "2024-09-11T23:31:15.797Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T23:31:15.797Z",
+        "firstPublishedAt": "2024-09-11T23:31:15.797Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/Mvpd66uT7AmpbqwjeBSJs"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Contact John via email at <a href='mailto:iam@johnpino.me'>iam@johnpino.me</a>. He is also active on LinkedIn <a href='https://www.linkedin.com/in/john-pino/' target='_blank'>[John's LinkedIn]</a>, where you can connect with him and learn more about his professional background."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3R2rTquCZ50TcIfWy0DN2d",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:31:21.727Z",
+        "updatedAt": "2024-09-11T23:31:38.025Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T23:31:38.025Z",
+        "firstPublishedAt": "2024-09-11T23:31:38.025Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3R2rTquCZ50TcIfWy0DN2d"
+      },
+      "fields": {
+        "content": {
+          "en-US": "When optimizing a web application, John starts by examining the task runner configuration, usually Webpack, and the output files to understand how the build is processed. He also ensures images are handled efficiently, using lazy loading and responsive images with srcset and sizes attributes. Additionally, he checks if a cache strategy is in place and whether the application uses a CDN. John prefers using Server-Side Rendering (SSR) to handle resource-intensive logic on the server, optimizing the client-side performance."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2vEHINc9wwVEWZQlMwsHQB",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:31:48.213Z",
+        "updatedAt": "2024-09-11T23:31:55.924Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:31:55.924Z",
+        "firstPublishedAt": "2024-09-11T23:31:55.924Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2vEHINc9wwVEWZQlMwsHQB"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John takes a systematic approach to debugging. First, he tries to identify the possible causes of the issue. Depending on the framework, he uses the tools provided, such as browser extensions for Vue and Nuxt. He regularly uses browser developer tools to check network requests, responses, console logs, and local storage, ensuring a comprehensive analysis of the problem."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6rocNSg2vV0vBEvtKXULxe",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:32:44.185Z",
+        "updatedAt": "2024-09-11T23:32:51.356Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:32:51.356Z",
+        "firstPublishedAt": "2024-09-11T23:32:51.356Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6rocNSg2vV0vBEvtKXULxe"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is a friendly, approachable person who loves sharing knowledge with his team. He’s always available to chat and help teammates in need. He also enjoys learning from others and believes that every interaction, no matter how small, can contribute to personal growth."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "khJ8ht7sUHR3MLe2AOwfX",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:33:03.837Z",
+        "updatedAt": "2024-09-11T23:33:14.872Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T23:33:14.872Z",
+        "firstPublishedAt": "2024-09-11T23:33:14.872Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/khJ8ht7sUHR3MLe2AOwfX"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John believes communication is the foundation of a strong engineering team, especially in a remote environment. Open and clear communication has always been the key to success in all of his projects."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6kZet0KKbl7Jg7BYCGkiGR",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:33:27.861Z",
+        "updatedAt": "2024-09-11T23:33:44.794Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T23:33:44.794Z",
+        "firstPublishedAt": "2024-09-11T23:33:44.794Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6kZet0KKbl7Jg7BYCGkiGR"
+      },
+      "fields": {
+        "content": {
+          "en-US": "In one of John’s recent projects, he faced an issue integrating OpenAI’s API using streaming for natural, fluid responses. This posed a challenge due to the complexity of handling the data flow in real-time. John approached the problem by researching different streaming techniques and experimenting with configurations until he achieved smooth integration. His ability to troubleshoot through in-depth research and testing resulted in a seamless AI experience for users."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "zwhzs6Rz6vrENOPJb7z6K",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:34:00.033Z",
+        "updatedAt": "2024-09-11T23:34:07.946Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:34:07.946Z",
+        "firstPublishedAt": "2024-09-11T23:34:07.946Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/zwhzs6Rz6vrENOPJb7z6K"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is always looking to expand his skill set, especially in the fields of AI and web performance optimization. He’s currently focused on mastering more advanced AI integrations, such as real-time data processing and custom model fine-tuning. Additionally, John aims to continue leading development teams and helping junior developers grow in their careers, all while staying up-to-date with the latest web technologies."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "5nuiMJ3nqJ417aNBX1uoDf",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:34:20.558Z",
+        "updatedAt": "2024-09-11T23:34:27.700Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:34:27.700Z",
+        "firstPublishedAt": "2024-09-11T23:34:27.700Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/5nuiMJ3nqJ417aNBX1uoDf"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John consistently receives positive feedback from clients and stakeholders for his clear communication and ability to deliver high-quality work. At Studio F, stakeholders praised John’s ability to simplify complex concepts and ensure alignment between the design and development teams. His work on refactoring the e-commerce frontend resulted in fewer complaints about user experience, which was a major achievement for the client."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "4NVHzfYj0gBz42BhFOvCRW",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:34:37.798Z",
+        "updatedAt": "2024-09-11T23:34:44.891Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:34:44.891Z",
+        "firstPublishedAt": "2024-09-11T23:34:44.891Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/4NVHzfYj0gBz42BhFOvCRW"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is no stranger to sudden project changes. When faced with shifting requirements, he remains calm and evaluates the situation carefully before planning a new course of action. He ensures clear communication with all stakeholders and collaborates with his team to make adjustments. In fast-paced environments like Valtech, his ability to stay flexible has helped his teams stay on track and deliver successful results despite changes."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "53z8cLJBxkV9aCSdoyZTW",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:34:54.574Z",
+        "updatedAt": "2024-09-11T23:35:01.994Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:35:01.994Z",
+        "firstPublishedAt": "2024-09-11T23:35:01.994Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/53z8cLJBxkV9aCSdoyZTW"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Fundación Salamandra is an organization based in Cali, Colombia, dedicated to providing high-quality training for work, especially in the fields of medical emergencies and life support. Their courses and certifications cover essential areas such as basic and advanced life support (BLS/ACLS), trauma care, and intensive care management. They work with professionals from various medical fields to deliver hands-on training aimed at improving participants' skills in handling emergencies."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3Gpe0cTiLUMAmKCVYHQCBk",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:35:05.981Z",
+        "updatedAt": "2024-09-11T23:35:17.970Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:35:17.970Z",
+        "firstPublishedAt": "2024-09-11T23:35:17.970Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3Gpe0cTiLUMAmKCVYHQCBk"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Colegio Bennet is an educational institution located in Cali, Colombia. It provides K-12 education, focusing on comprehensive academic development and fostering a supportive environment for students. John worked here as a Multimedia Designer, where he was responsible for planning multimedia projects, including video editing, sound design, and web development using HTML and CSS."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "546XLQGO5EwAQO2n6DPC0S",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:35:23.455Z",
+        "updatedAt": "2024-09-11T23:35:32.307Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-11T23:35:32.307Z",
+        "firstPublishedAt": "2024-09-11T23:35:32.307Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/546XLQGO5EwAQO2n6DPC0S"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Universidad Autónoma de Occidente (UAO) is a prominent university located in Cali, Colombia, offering a variety of undergraduate and graduate programs with a focus on technology, media, design, and engineering. John worked here as a Web Design professor, teaching students the fundamentals of UX/UI design and frontend development, while sharing his industry experience to help them navigate the latest trends in technology."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "miscellaneous"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "10pBodaEdhi2j5JqFfPAMj",
+        "type": "Entry",
+        "createdAt": "2024-09-11T23:35:43.016Z",
+        "updatedAt": "2024-09-11T23:35:55.853Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-11T23:35:55.853Z",
+        "firstPublishedAt": "2024-09-11T23:35:55.853Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/10pBodaEdhi2j5JqFfPAMj"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John's profile on GitHub: <a href='https://github.com/johnpino' target='_blank'>[John's GitHub]</a>"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "projects"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "MGDYYMprFnjEvlxnvY4pf",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:13:38.825Z",
+        "updatedAt": "2024-09-12T00:14:39.804Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-12T00:14:39.804Z",
+        "firstPublishedAt": "2024-09-12T00:14:14.392Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/MGDYYMprFnjEvlxnvY4pf"
+      },
+      "fields": {
+        "content": {
+          "en-US": "One of John's most recent projects is his online portfolio at johnpino.me. The goal of this project is to provide visitors with detailed information about his professional profile. To achieve this, John used some of his favorite technologies: Nuxt with Server-Side Rendering (SSR) for enhanced security, Vue.js for the frontend, TailwindCSS for styling, and Contentful as the CMS. Additionally, John integrated OpenAI’s ChatGPT to embark on the world of Artificial Intelligence. He spent significant time researching how AI works, exploring the available models, configurations, APIs, and features to incorporate into the portfolio. You can explore the code repository here: <a href='https://github.com/johnpino/portfolio-2024' target='_blank'>[GitHub Repository]</a>.\n\nOne of the main challenges John faced during the development of his online portfolio was integrating OpenAI's APIs using streaming, to make the responses feel more natural and fluid. Instead of waiting for a complete response from the AI, John wanted the user to feel like the AI was actively typing, improving the overall UX. He overcame this by experimenting with different configurations and researching how OpenAI models handle streaming."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "projects"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2RmazSsduNn3APA1k1ouM2",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:14:19.856Z",
+        "updatedAt": "2024-09-12T00:16:12.375Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-09-12T00:16:12.375Z",
+        "firstPublishedAt": "2024-09-12T00:14:59.690Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2RmazSsduNn3APA1k1ouM2"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John also developed a proof of concept (PoC) for social network features using Contentful as a CMS. The goal was to see if Contentful could support a web application with content posting, liking, and commenting features. The idea was to allow customers to integrate these social network-like features into their websites without needing a huge budget, thus enabling collaboration among users. This solution is especially useful for companies, such as fashion brands hosting events, where attendees can register activity and collaborate. For this project, John used Next.js with React, along with SSR for server-side rendering, AuthJS for authentication, and Contentful Management API. Instead of using the Contentful SDK, John opted for the Management API due to issues with the SDK clashing with SSR features. You can check out the repository here: <a href='https://github.com/johnpino/social-network-contentful' target='_blank'>[GitHub Repository]</a>.\n\nFor this project, John chose the Contentful Management API over the SDK because, in previous experiences, some of Contentful's SDKs caused issues when trying to access resources that were only available in the browser. These conflicts interfered with the Server-Side Rendering (SSR) he was using for the project, so he decided to use the Management API directly, which worked better for his SSR setup.\n\nJohn spent a lot of time researching AI technology to integrate OpenAI’s ChatGPT into his portfolio. He studied the different models, configurations, available APIs, and training features that would allow him to customize the AI for his specific needs. John is now a big enthusiast of AI, as he believes it will open up new possibilities in his field. His implementation allows users to ask the AI questions about his professional profile, with responses that are fluid and natural thanks to the use of streaming technology."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "projects"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "1JYmYgMthvv44ikBboqJ85",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:15:04.659Z",
+        "updatedAt": "2024-09-12T00:16:24.093Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:16:24.093Z",
+        "firstPublishedAt": "2024-09-12T00:16:24.093Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/1JYmYgMthvv44ikBboqJ85"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has extensive experience with Vue and Nuxt, especially in building high-performance, secure applications. For example, in his online portfolio project, he used Nuxt with SSR to optimize both performance and security. Additionally, he integrated AI with OpenAI’s API, ensuring seamless communication between the backend and frontend. With React, John has worked on large-scale applications using state management tools like Redux and Zustand, efficiently handling complex state logic across different parts of the app."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "4QGThOIFMibS4z6kYM5luy",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:16:45.645Z",
+        "updatedAt": "2024-09-12T00:17:52.327Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-09-12T00:17:52.327Z",
+        "firstPublishedAt": "2024-09-12T00:17:27.385Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/4QGThOIFMibS4z6kYM5luy"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John loves working with Vue and Contentful, but he also has some space in his heart for React. As a seasoned Frontend Developer, he's well-versed in core frontend technologies. He also knows how to craft beautiful and functional web applications using SCSS/LESS, Typescript and Handlebars. Not exactly programming languages, but John has experience with Tailwind, Webpack, Eslint and other libraries."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2FrVDpAgLmTkXgTpGWbbuc",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:17:56.576Z",
+        "updatedAt": "2024-09-12T00:19:26.329Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-09-12T00:19:26.329Z",
+        "firstPublishedAt": "2024-09-12T00:18:35.054Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2FrVDpAgLmTkXgTpGWbbuc"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is skilled in a variety of frontend technologies, including Vue.js and React. He’s also proficient in HTML, CSS, SASS, JavaScript, and TypeScript. Additionally, he works with tools like Webpack, Gulp, and Grunt, and has experience with e-commerce platforms like Hybris and Shopify, as well as headless CMS solutions like Contentful and Contentstack."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "15kGPKOa8KdbFptwatbDpi",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:18:39.527Z",
+        "updatedAt": "2024-09-12T00:20:29.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-09-12T00:20:29.825Z",
+        "firstPublishedAt": "2024-09-12T00:19:36.755Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/15kGPKOa8KdbFptwatbDpi"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has experience with several e-commerce platforms, including Hybris, Drupal, WooCommerce, and Shopify. He’s worked on creating frontend solutions that support seamless user experiences in e-commerce, with a focus on speed and accessibility."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3TpKbqZxZdWxOPzQTcZQq9",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:20:33.695Z",
+        "updatedAt": "2024-09-12T00:20:41.200Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:20:41.200Z",
+        "firstPublishedAt": "2024-09-12T00:20:41.200Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3TpKbqZxZdWxOPzQTcZQq9"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has experience with a range of tools and libraries, including Bootstrap, Foundation, and Tailwind for CSS. He also works with build tools like Webpack, Gulp, and Grunt, as well as version control systems such as GIT and Azure DevOps."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "hnm4E14IP5S2oKpzhThz7",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:20:47.497Z",
+        "updatedAt": "2024-09-12T00:21:50.959Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-09-12T00:21:50.959Z",
+        "firstPublishedAt": "2024-09-12T00:21:50.959Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/hnm4E14IP5S2oKpzhThz7"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is proficient in version control tools. He uses best practices for collaboration and integrates tools like Husky and Commitlint with Conventional Commits to enhance his commits and make sure they follow best industry standards."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3ohnqgQKcTrInqwTaBf8b1",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:22:01.665Z",
+        "updatedAt": "2024-09-12T00:22:14.653Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:22:14.653Z",
+        "firstPublishedAt": "2024-09-12T00:22:14.653Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3ohnqgQKcTrInqwTaBf8b1"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John holds a Contentful certification, which is valid until January 25. He has a deep understanding of Contentful and uses it to build scalable, content-driven web applications."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7Er54utxyqkfa3nXUQWwLb",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:22:24.066Z",
+        "updatedAt": "2024-09-12T00:22:34.777Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:22:34.777Z",
+        "firstPublishedAt": "2024-09-12T00:22:34.777Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7Er54utxyqkfa3nXUQWwLb"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has extensive experience using Agile methodologies in his roles at Valtech, MAS Global, and Keyrus. He actively participates in sprint planning, daily stand-ups, and retrospectives, ensuring efficient teamwork and timely delivery of projects. His experience with Scrum has been instrumental in collaborating effectively with cross-functional teams."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "4RkM51hroJA9RqwAiKBdXX",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:22:39.590Z",
+        "updatedAt": "2024-09-12T00:23:01.579Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:23:01.579Z",
+        "firstPublishedAt": "2024-09-12T00:23:01.579Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/4RkM51hroJA9RqwAiKBdXX"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has experience working with several state management libraries to handle complex logic. For React, he uses Redux and Zustand, and for Vue, he’s worked with Pinia and Vuex to manage application states efficiently."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2BNmU3SjcpWgjhgODIlRPE",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:23:05.804Z",
+        "updatedAt": "2024-09-12T00:23:23.204Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:23:23.204Z",
+        "firstPublishedAt": "2024-09-12T00:23:23.204Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2BNmU3SjcpWgjhgODIlRPE"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is very passionate about making web components accessible. He has used ARIA to ensure components are more accessible to all users. For a client at Valtech, he also implemented React-Aria, which provides initial configurations for creating accessible components, ensuring a better user experience."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "4cZ7oJ1JOj74hbkPYygbxI",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:23:34.476Z",
+        "updatedAt": "2024-09-12T00:23:44.337Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:23:44.337Z",
+        "firstPublishedAt": "2024-09-12T00:23:44.337Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/4cZ7oJ1JOj74hbkPYygbxI"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John recently learned OpenAI technology. He believes it will bring significant benefits to multiple fields and is keeping up with the industry by diving deep into AI. He’s particularly excited about the new possibilities AI will bring to web development."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7rhpTPrXp5EXNaNoUtVUQe",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:23:48.563Z",
+        "updatedAt": "2024-09-12T00:24:10.718Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:24:10.718Z",
+        "firstPublishedAt": "2024-09-12T00:24:10.718Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7rhpTPrXp5EXNaNoUtVUQe"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Here’s a breakdown of John's expertise in various technologies, ranked from 1 to 5: \\n- Vue.js: 5 \\n- React: 4 \\n- Nuxt.js: 5 \\n- Next.js: 4 \\n- Server-Side Rendering (SSR): 4.5 \\n- HTML: 5 \\n- CSS: 5 \\n- SASS/SCSS: 5 \\n- JavaScript: 5 \\n- TypeScript: 4.5 \\n- Webpack: 4 \\n- Gulp: 4 \\n- Grunt: 4 \\n- TailwindCSS: 5 \\n- Contentful: 4.5 \\n- Contentstack: 4 \\n- Shopify: 4 \\n- Umbraco: 3.5 \\n- EpiServer: 3.5 \\n- Git: 4.5 \\n- Azure DevOps: 3 \\n- Redux: 4 \\n- Zustand: 5 \\n- Pinia: 5 \\n- Vuex: 5 \\n- AuthJS: 4 \\n- Contentful Management API: 4.5 \\n- React-Aria: 4 \\n- OpenAI (AI integration): 3.5 (still learning) \\nTechnologies no longer in use: \\n- Bootstrap, Foundation, Hybris, WooCommerce, Drupal."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2xPPhOc4JK82iNksRlwizu",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:24:17.188Z",
+        "updatedAt": "2024-09-12T00:24:36.198Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-09-12T00:24:36.198Z",
+        "firstPublishedAt": "2024-09-12T00:24:30.286Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2xPPhOc4JK82iNksRlwizu"
+      },
+      "fields": {
+        "content": {
+          "en-US": "Here’s a breakdown of John's expertise in various technologies, ranked from 1 to 5, with context: \\n\\n- **Vue.js (5)**: John has extensive experience with Vue.js, having used it for both large-scale applications and personal projects. He has built custom components and integrated state management systems like Vuex and Pinia.\\n\\n- **React (4)**: John has worked with React in several projects, primarily using it for dynamic web applications with state management through Redux and Zustand. While not his primary framework, he is comfortable with complex React structures.\\n\\n- **Nuxt.js (5)**: John excels in Nuxt.js, particularly using it in server-side rendered applications for enhanced performance and security. It’s his go-to framework for SEO-optimized projects.\\n\\n- **Server-Side Rendering (SSR) (4.5)**: John often utilizes SSR in Vue and Nuxt projects to handle resource-intensive operations on the server, improving the client-side experience.\\n\\n- **JavaScript (5)**: With over a decade of experience, John is highly proficient in JavaScript and uses it as the core of most of his projects. He has deep knowledge of ES6+ features.\\n\\n- **TypeScript (4.5)**: John integrates TypeScript into his projects to improve code reliability and maintainability, especially in larger applications.\\n\\n- **TailwindCSS (5)**: John is a big advocate of TailwindCSS for utility-first styling, having led conferences and workshops on its use at Valtech.\\n\\nTechnologies no longer in use: \\n- **Bootstrap, Foundation, WooCommerce, Drupal**: John no longer uses these technologies in his projects as he has moved towards more modern frameworks and tools."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "skillsTechnologies"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2rr6CfLA4rjYd9BiABzi8F",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:24:50.410Z",
+        "updatedAt": "2024-09-12T00:25:01.600Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:25:01.600Z",
+        "firstPublishedAt": "2024-09-12T00:25:01.600Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2rr6CfLA4rjYd9BiABzi8F"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is experienced with design tools like Adobe Suite CC, which includes Photoshop and Illustrator. His background in design allows him to collaborate more effectively with UI/UX teams and bring a visual perspective to frontend development."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3DNYLH4uFCNOodoUHIJEoR",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:25:15.926Z",
+        "updatedAt": "2024-09-12T00:25:29.142Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:25:29.142Z",
+        "firstPublishedAt": "2024-09-12T00:25:29.142Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3DNYLH4uFCNOodoUHIJEoR"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is a great team player. He's always willing to help his teammates and share his knowledge with them. He's also a great communicator and has a way for explaining complex concepts in a simple way."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7wOhSS63B7fXXOGaYFyuJc",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:25:37.887Z",
+        "updatedAt": "2024-09-12T00:25:59.055Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:25:59.055Z",
+        "firstPublishedAt": "2024-09-12T00:25:59.055Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7wOhSS63B7fXXOGaYFyuJc"
+      },
+      "fields": {
+        "content": {
+          "en-US": "What's his biggest weakness? John is very detail-oriented, which can sometimes make him a perfectionist. He's aware of this and takes steps to ensure that he doesn't get bogged down in the details."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2BAT1GP5aW0GQ2wX7lV5CL",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:26:09.126Z",
+        "updatedAt": "2024-09-12T00:26:19.006Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:26:19.006Z",
+        "firstPublishedAt": "2024-09-12T00:26:19.006Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2BAT1GP5aW0GQ2wX7lV5CL"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John’s soft skills include strong communication, proactivity, and flexibility. He enjoys mentoring other developers and finds great satisfaction in helping others grow. His ability to bridge the gap between design and frontend development is one of his standout traits."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "4iBXxORL2cBiJJHMWV5ukc",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:26:26.669Z",
+        "updatedAt": "2024-09-12T00:26:38.978Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:26:38.978Z",
+        "firstPublishedAt": "2024-09-12T00:26:38.978Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/4iBXxORL2cBiJJHMWV5ukc"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John collaborates closely with designers and backend developers in daily standups, which helps address blockers as a team. He ensures that before starting a ticket, the behavior is well documented in Figma, and everyone is aligned on the project’s requirements. This method ensures smooth communication and fewer iterations between teams."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "D3qhbFIhc3BAvN5VVVVXK",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:26:43.975Z",
+        "updatedAt": "2024-09-12T00:27:02.821Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:27:02.821Z",
+        "firstPublishedAt": "2024-09-12T00:27:02.821Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/D3qhbFIhc3BAvN5VVVVXK"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John prioritizes open communication and collaboration when handling disagreements. He encourages team members to clearly explain their reasoning and ensures discussions are constructive, focusing on the best solution for the project. When disagreements are technical, John relies on data, such as performance metrics or scalability, to guide decisions. If there’s no clear solution, he promotes experimentation by creating small prototypes to test different approaches."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "37jHNBamASydMA5sM1a9oq",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:27:14.796Z",
+        "updatedAt": "2024-09-12T00:27:27.413Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:27:27.413Z",
+        "firstPublishedAt": "2024-09-12T00:27:27.413Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/37jHNBamASydMA5sM1a9oq"
+      },
+      "fields": {
+        "content": {
+          "en-US": "How does John ensure non-technical stakeholders understand technical aspects of a project? John uses analogies to explain technical concepts in a way that non-technical stakeholders can understand. During his time at Studio F, he often used analogies to make sure stakeholders were on the same page, and he found that follow-up questions were key to ensuring everything was clear."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "aM8fPmWyoSP4av7VO9p4V",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:27:39.634Z",
+        "updatedAt": "2024-09-12T00:27:45.727Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:27:45.727Z",
+        "firstPublishedAt": "2024-09-12T00:27:45.727Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/aM8fPmWyoSP4av7VO9p4V"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is adaptable to changes in project requirements, understanding that the tech industry is fast-paced. He remains calm and evaluates the situation before planning a course of action. He also communicates his concerns or insights with project leads to ensure alignment and a smooth transition when changes arise."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "3ruL1mIylc1s9BxwZh2pXU",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:27:56.675Z",
+        "updatedAt": "2024-09-12T00:28:08.377Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:28:08.377Z",
+        "firstPublishedAt": "2024-09-12T00:28:08.377Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/3ruL1mIylc1s9BxwZh2pXU"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John values feedback as it allows him to grow both professionally and personally. When providing feedback, he ensures the recipient knows in advance and delivers it in a concise and constructive manner, focusing on results and situations, not individuals. Afterward, he collaborates with the recipient to build a plan for improvement."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "softSkills"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2J6oSRRuCSCPKwWUwHXnPR",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:28:17.449Z",
+        "updatedAt": "2024-09-12T00:28:31.930Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:28:31.930Z",
+        "firstPublishedAt": "2024-09-12T00:28:31.930Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2J6oSRRuCSCPKwWUwHXnPR"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John’s ability to foster collaboration is one of his strongest assets. In his role at Valtech, he successfully mentored junior developers by breaking down complex concepts and ensuring they felt comfortable asking questions. When conflicts arose, John encouraged open communication and guided the team to focus on data-driven solutions. His empathy and open-door policy created a positive work environment where team members felt valued and motivated."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workExperience"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2IBXqahWI80jv0YlEGUvYV",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:28:50.137Z",
+        "updatedAt": "2024-09-12T00:28:57.536Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:28:57.536Z",
+        "firstPublishedAt": "2024-09-12T00:28:57.536Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2IBXqahWI80jv0YlEGUvYV"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has over 12 years of experience in frontend development. He has worked on various projects, including e-commerce platforms, web applications, and content management systems. John has experience working with startups, agencies, and large corporations, which has given him a broad perspective on the industry."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workExperience"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "2OwYrRELFT7AiIggKHtQCW",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:29:27.382Z",
+        "updatedAt": "2024-09-12T15:12:25.654Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-09-12T15:12:25.654Z",
+        "firstPublishedAt": "2024-09-12T00:29:52.628Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/2OwYrRELFT7AiIggKHtQCW"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is currently working as a Lead Frontend Developer at Valtech since July 2021. He’s responsible for delivering high-quality frontend solutions for clients in the USA, focusing on Vue 3 and React. He also uses Contentful and Contentstack to handle content and provides UX/UI advice to improve accessibility."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workPreferences"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "7GuFCjtXOrboJwcV0CF21F",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:33:39.682Z",
+        "updatedAt": "2024-09-12T00:34:05.368Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-09-12T00:34:05.368Z",
+        "firstPublishedAt": "2024-09-12T00:34:05.368Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/7GuFCjtXOrboJwcV0CF21F"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John is always open to hearing about new opportunities, even if he’s not actively looking for a job. He believes that a good opportunity can arise at any time, and he enjoys keeping his mind open to possibilities."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workPreferences"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "1kfBly0B9gHmLmyyVWhgYd",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:34:09.511Z",
+        "updatedAt": "2024-09-12T00:34:21.398Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:34:21.398Z",
+        "firstPublishedAt": "2024-09-12T00:34:21.398Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/1kfBly0B9gHmLmyyVWhgYd"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John prefers long-term remote work, as it fits his lifestyle and boosts his productivity. He has been working remotely for the past 4 years and enjoys the flexibility of working from home. This allows him to avoid commuting and other extra expenses like food and transportation."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workPreferences"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "34CpITEyEllNZ9Q92wMDBi",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:34:25.216Z",
+        "updatedAt": "2024-09-12T00:34:41.529Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-09-12T00:34:41.529Z",
+        "firstPublishedAt": "2024-09-12T00:34:41.529Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/34CpITEyEllNZ9Q92wMDBi"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John has worked as a contractor for the past 4 years, but he doesn't have a strong preference regarding contract type. He’s open to different options, as long as the role aligns with his goals and provides the flexibility of remote work."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workPreferences"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "65wEIYL5lUcu4ADd2UN99C",
+        "type": "Entry",
+        "createdAt": "2024-09-12T00:34:52.779Z",
+        "updatedAt": "2024-09-12T00:35:00.154Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-09-12T00:35:00.154Z",
+        "firstPublishedAt": "2024-09-12T00:35:00.154Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/65wEIYL5lUcu4ADd2UN99C"
+      },
+      "fields": {
+        "content": {
+          "en-US": "John prefers remote work over relocation as it allows him to maintain a healthy work-life balance and avoid the stress of moving. He values the freedom and flexibility that remote work offers and believes it enhances his productivity and creativity. In any case, that's not a deal breaker for him, and he's open to discussing relocation if the opportunity is compelling."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "workExperience"
+            }
+          }
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "id": "6BclcNOm7vOACEn39oExyh",
+        "type": "Entry",
+        "createdAt": "2024-09-12T15:12:50.470Z",
+        "updatedAt": "2024-09-12T15:29:51.517Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 28,
+        "publishedAt": "2024-09-12T15:29:51.517Z",
+        "firstPublishedAt": "2024-09-12T15:20:17.916Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 29,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "datasetItem"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/yejtaz3k5m36/environments/master/entries/6BclcNOm7vOACEn39oExyh"
+      },
+      "fields": {
+        "content": {
+          "en-US": "This an extensive list of John's work experience. It lists all the companies he has worked for:\n\nValtech\nJuly 2021 - Present\nLead Frontend Developer\n• Provide high quality front-end solutions to clients based in the USA.\n• Support new front-end features for companies in the educational/artistic sector.\n• Build new front-end solutions using Vue 3 and React as front-end framework.\n• Use Contentful and Contentstack to support content handling in composable solutions.\n• Advice on UX/UI matters to improve accessibility.\n• Lead frontend developers in their career path.\n\nMAS Global\nMarch 2020 – July 2021\nMid Senior Frontend Developer\n• Provide high quality front-end solutions to clients based in the USA.\n• Support new front-end features for companies in the cultural sector (museums, operas,\ntheaters), using CMS such as Umbraco, EpiServer and TNEW (Tessitura).\n• Support new front-end features using Angular 8 as front-end framework, and vanilla JS.\n• Advice on UX/UI matters to improve accessibility.\n\nKeyrus Colombia (www.keyrus.com)\nSeptember 2019 - March 2020\nLead Frontend Developer\n• Lead frontend processes for a major company client, including consultation on UX/UI and Web\nDevelopment using Hybris and Vue.\n• Review Pull Requests from fellow Front-end Developers for best FED practices.\n• Communicate with clients to refine tasks and ensure a good understanding of each one.\n\nSTF Group (www.studiof.com.co)\nSeptember 2018 - September 2019\nLead Frontend Developer & UX/UI Designer\n• Lead major projects on UX/UI to optimize current websites and increase conversion using\ngood practices in user experience.\n• Lead front-end UI refactor.\n• Develop digital resources using HTML, CSS, SASS, JS, Bootstrap and Vtex.\n\nUniversidad Autónoma de Occidente (www.uao.edu.co)\nJanuary 2017 - September 2018\nWeb Design Teacher\n• Lead groups of students on their learning process using new technologies to make them feel\ninterested on the subject (UX/UI Design, Frontend Development).\n\nFreelancer on Upwork (www.upwork.com)\nJuly 2015 - September 2018\n• Frontend Development, UX/UI Design and Graphic Design for companies in USA, England,\nAustralia, and Spain. (HTML, CSS/SASS, Vanilla JS, jQuery).\n• Communicate with clients for debriefing.\n• Schedule follow-up meeting with clients to communicate progress or blockers.\n• Deployment to production (set up DNS records, configure hosting and domain, etc.)\n• Set up payment gateways in WordPress and Shopify.\n\nBennet School (www.colegiobennett.edu.co)\nSeptember 2015 - September 2016\nMultimedia Designer\n• Plan and execute all multimedia projects including videos, multimedia presentations, sound\nediting and Web Development. Design and code email HTML templates.\n\nSalamandra (www.salamandra.edu.co)\nFebruary 2014 - February 2015\nGraphic Designer & Multimedia Designer\n• Plan and execute all multimedia projects including videos, multimedia presentations, and\nsound editing.\n• Design marketing material including brochures, social network images, packaging, user\ninterfaces, user experiences and stationary material.\n• Web design and Frontend Development (Drupal and HTML email templates).\n\nCenal (www.cenal.com.co)\nSeptember 2012 - February 2014\nTeacher\n• Adapt and develop the different courses which were part of the career. Lead groups of\nstudents in their learning process"
         }
       }
     }
@@ -1544,6 +7211,62 @@
           }
         },
         "updatedAt": "2023-06-12T22:42:29Z"
+      },
+      "headers": [
+      ]
+    },
+    {
+      "name": "Send to Pinecone",
+      "url": "https://www.johnpino.me/api/create/dataset-item",
+      "httpBasicUsername": null,
+      "topics": [
+        "Entry.publish",
+        "Entry.delete"
+      ],
+      "filters": [
+        {
+          "equals": [
+            {
+              "doc": "sys.contentType.sys.id"
+            },
+            "datasetItem"
+          ]
+        }
+      ],
+      "transformation": {
+        "body": {
+          "id": "{ /payload/sys/id }",
+          "content": "{ /payload/fields/content/en-US }"
+        }
+      },
+      "active": true,
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "2TffKgeDvJJi0NeWJbvmcp",
+        "version": 12,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "yejtaz3k5m36"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "createdAt": "2024-09-09T02:15:56Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3EoH3D0Bwvdi0ZM1KuUrRO"
+          }
+        },
+        "updatedAt": "2024-09-11T06:24:23Z"
       },
       "headers": [
       ]
