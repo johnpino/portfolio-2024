@@ -41,8 +41,14 @@
           v-if="isLoading || answer.content"
           ref="answerRef"
           class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
-          v-html="answer.content ? answer.content : `<span class='italic text-xs'>${loadingLabel}<span>`"
-        />
+        >
+          <template v-if="answer.content">
+            <div v-html="answer.content" />
+          </template>
+          <template v-else>
+            <Icon name="svg-spinners:180-ring-with-bg" /> {{ loadingLabel }}
+          </template>
+        </div>
       </div>
       <form
         class="flex gap-4 flex-col"
