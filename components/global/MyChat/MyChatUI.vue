@@ -40,44 +40,46 @@
           :placeholder="!isMounted ? 'Loading...' : inputPlaceholder"
           required
         />
-        <button
-          class="w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200 flex items-center"
-          type="submit"
-          :disabled="isLoading || !isMounted"
-        >
-          <span class="px-3">{{ send }}</span>
-          <div class="p-3 border-l border-solid border-rose-100">
-            <Icon
-              name="fa6-regular:paper-plane"
-              mode="svg"
-            />
-          </div>
-        </button>
-      </form>
-      <template v-if="queries?.length">
-        <div class="max-w-[500px] overflow-x-scroll pb-2">
-          <div class="flex gap-4">
-            <template
-              v-for="query in queries"
-              :key="query"
-            >
-              <button
-                class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-200 hover:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-300"
-                :disabled="query.wasSent || isLoading || !isMounted"
-                @click="sendQuery(query)"
-              >
-                <span class="px-3">{{ query.value }}</span>
-                <div class="p-3 border-l border-solid border-slate-100 bg-slate-300 group-disabled:bg-slate-50">
-                  <Icon
-                    name="fa6-regular:paper-plane"
-                    mode="svg"
-                  />
-                </div>
-              </button>
-            </template>
-          </div>
+        <div class="flex gap-4 items-start">
+          <template v-if="queries?.length">
+            <div class="max-w-[500px] overflow-x-scroll pb-2">
+              <div class="flex gap-4">
+                <template
+                  v-for="query in queries"
+                  :key="query"
+                >
+                  <button
+                    class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-100 disabled:bg-slate-50 disabled:text-slate-300"
+                    :disabled="query.wasSent || isLoading || !isMounted"
+                    @click="sendQuery(query)"
+                  >
+                    <span class="px-3">{{ query.value }}</span>
+                    <div class="p-3 border-l border-solid border-slate-100 bg-slate-200 group-disabled:bg-slate-50 group-hover:bg-rose-500 group-hover:text-white  rounded-tr-sm rounder-br-sm transition-all">
+                      <Icon
+                        name="fa6-regular:paper-plane"
+                        mode="svg"
+                      />
+                    </div>
+                  </button>
+                </template>
+              </div>
+            </div>
+          </template>
+          <button
+            class="w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200 flex items-center flex-shrink-0 transition-all group"
+            type="submit"
+            :disabled="isLoading || !isMounted"
+          >
+            <span class="px-3">{{ send }}</span>
+            <div class="p-3 border-l border-solid border-rose-100 group-hover:bg-rose-700 rounded-tr-sm rounded-br-sm transition-all">
+              <Icon
+                name="fa6-regular:paper-plane"
+                mode="svg"
+              />
+            </div>
+          </button>
         </div>
-      </template>
+      </form>
     </div>
   </div>
 </template>
