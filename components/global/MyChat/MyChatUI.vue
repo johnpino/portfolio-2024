@@ -17,7 +17,7 @@
         v-if="isLoading || answer.content"
         ref="answerRef"
         class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
-        v-html=" answer.content ? answer.content : loadingLabel"
+        v-html="answer.content ? answer.content : `<span class='italic text-xs'>${loadingLabel}<span>`"
       />
     </div>
     <form
@@ -74,9 +74,9 @@ watch(
 )
 
 // Adjust loading label based on loading state
-watch(isLoading, (newVal) => {
-  let timeoutId
+let timeoutId: ReturnType<typeof setTimeout>
 
+watch(isLoading, (newVal) => {
   if (!newVal) {
     clearTimeout(timeoutId)
     loadingLabel.value = '...'
