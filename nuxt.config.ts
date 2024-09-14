@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'nuxt-lodash'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', 'nuxt-lodash', '@nuxt/icon'],
   alias: {
     'contentful-types': fileURLToPath(new URL('./contentful/types', import.meta.url)),
   },
@@ -48,5 +48,15 @@ export default defineNuxtConfig({
         dir: './assets/templates',
       },
     ],
+  },
+  icon: {
+    serverBundle: {
+      collections: ['svg-spinners', 'fa6-regular'],
+    },
+  },
+  tailwindcss: {
+    config: {
+      safelist: ['text-rose-500'],
+    },
   },
 })

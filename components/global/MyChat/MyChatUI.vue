@@ -9,12 +9,16 @@
             :key="query"
           >
             <button
-              class="py-2 px-4 rounded-sm text-xs flex-shrink-0 italic"
-              :class="query.wasSent ? 'bg-slate-50 text-slate-300' : 'bg-rose-500 text-white'"
+              class="py-2 px-4 rounded-sm text-xs font-light flex-shrink-0 flex gap-2 items-center"
+              :class="query.wasSent ? 'bg-slate-50 text-slate-300' : 'bg-slate-200'"
               :disabled="query.wasSent || isLoading || !isMounted"
               @click="sendQuery(query)"
             >
               {{ query.value }}
+              <Icon
+                name="fa6-regular:paper-plane"
+                class="mr-2"
+              />
             </button>
           </template>
         </div>
