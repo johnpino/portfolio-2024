@@ -96,9 +96,9 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
                 break
               }
               case 'sendEmail': {
-                const { senderName, senderEmail, senderMessage } = JSON.parse(toolCall.args)
+                const { senderName, senderEmail, senderMessage, emailsSent } = JSON.parse(toolCall.args)
 
-                const response = await sendEmailUtility(senderName, senderEmail, senderMessage)
+                const response = await sendEmailUtility(senderName, senderEmail, senderMessage, emailsSent)
 
                 toolResults.push({
                   role: 'tool',

@@ -34,8 +34,9 @@
         required
       />
       <button
-        class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white uppercase text-xs font-bold"
+        class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white uppercase text-xs font-bold disabled:bg-rose-200"
         type="submit"
+        :disabled="isLoading"
       >
         {{ send }}
       </button>
