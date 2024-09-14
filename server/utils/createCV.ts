@@ -8,7 +8,7 @@ type CreateCVProps = {
 }
 
 export default async ({ markdownContent }: CreateCVProps) => {
-  const outputPath = resolve(`John Pino CV - ${new Date().toISOString()}.pdf`)
+  const outputPath = resolve(`/tmp/John Pino CV - ${new Date().toISOString()}.pdf`)
 
   await new Promise<void>((resolve) => {
     try {
