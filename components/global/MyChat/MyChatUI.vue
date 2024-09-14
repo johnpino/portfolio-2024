@@ -9,7 +9,7 @@
             :key="query"
           >
             <button
-              class="py-2 px-4 rounded-sm text-xs font-light flex-shrink-0 flex gap-2 items-center"
+              class="py-2 px-4 rounded-sm text-xs font-light flex-shrink-0 flex gap-2 items-center transition-all"
               :class="query.wasSent ? 'bg-slate-50 text-slate-300' : 'bg-slate-200'"
               :disabled="query.wasSent || isLoading || !isMounted"
               @click="sendQuery(query)"
@@ -46,7 +46,7 @@
             <div v-html="answer.content" />
           </template>
           <template v-else>
-            <Icon name="svg-spinners:180-ring-with-bg" /> {{ loadingLabel }}
+            <Icon name="svg-spinners:180-ring-with-bg" /> <span class="italic">{{ loadingLabel }}</span>
           </template>
         </div>
       </div>
