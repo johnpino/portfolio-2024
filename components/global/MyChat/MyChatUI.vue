@@ -1,30 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <template v-if="queries?.length">
-      <div class="max-w-[500px] overflow-x-scroll mb-2 pb-2">
-        <div class="flex gap-4">
-          <template
-            v-for="query in queries"
-            :key="query"
-          >
-            <button
-              class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-200 hover:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-300"
-              :disabled="query.wasSent || isLoading || !isMounted"
-              @click="sendQuery(query)"
-            >
-              <span class="px-3">{{ query.value }}</span>
-              <div class="p-3 border-l border-solid border-slate-100 bg-slate-300 group-disabled:bg-slate-50">
-                <Icon
-                  name="fa6-regular:paper-plane"
-                  mode="svg"
-                />
-              </div>
-            </button>
-          </template>
-        </div>
-      </div>
-    </template>
     <div class="max-w-[500px]">
       <div
         ref="scrollableAreaRef"
@@ -52,7 +28,7 @@
         </div>
       </div>
       <form
-        class="flex gap-4 flex-col"
+        class="flex gap-4 flex-col mb-4"
         @submit.prevent="submitHandler"
         @keyup.enter="submitHandler"
       >
@@ -65,13 +41,43 @@
           required
         />
         <button
-          class="py-2 px-4 w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200"
+          class="w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200 flex items-center"
           type="submit"
           :disabled="isLoading || !isMounted"
         >
-          {{ send }}
+          <span class="px-3">{{ send }}</span>
+          <div class="p-3 border-l border-solid border-rose-100">
+            <Icon
+              name="fa6-regular:paper-plane"
+              mode="svg"
+            />
+          </div>
         </button>
       </form>
+      <template v-if="queries?.length">
+        <div class="max-w-[500px] overflow-x-scroll pb-2">
+          <div class="flex gap-4">
+            <template
+              v-for="query in queries"
+              :key="query"
+            >
+              <button
+                class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-200 hover:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-300"
+                :disabled="query.wasSent || isLoading || !isMounted"
+                @click="sendQuery(query)"
+              >
+                <span class="px-3">{{ query.value }}</span>
+                <div class="p-3 border-l border-solid border-slate-100 bg-slate-300 group-disabled:bg-slate-50">
+                  <Icon
+                    name="fa6-regular:paper-plane"
+                    mode="svg"
+                  />
+                </div>
+              </button>
+            </template>
+          </div>
+        </div>
+      </template>
     </div>
   </div>
 </template>
