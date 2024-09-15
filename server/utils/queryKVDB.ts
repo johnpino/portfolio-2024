@@ -13,9 +13,10 @@ export default async () => {
   }
 
   const data = await kv.get<KVData>(ipAddress) || {}
+  const ttl = await kv.ttl(ipAddress) // Returns -2 if the key does not exist or -1 if it does not expire
 
   const set = async (value: KVData) => {
-    return kv.set(ipAddress, { ...data, ...value }, { ex: 60 * 60 * 24 })
+    return kv.set(ipAddress, { ...data, ...value }, { ex: ttl < 0 ? 60 * 60 * 24 : ttl })
   }
 
   return {
