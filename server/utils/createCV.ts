@@ -1,11 +1,22 @@
 import { put } from '@vercel/blob'
 import markdownIt from 'markdown-it'
+import hasReachedLimitHandler from './hasReachedLimit'
 
 type CreateCVProps = {
   markdownContent: string
 }
 
 export default async ({ markdownContent }: CreateCVProps) => {
+  const hasReachedLimit = await hasReachedLimitHandler({ type: 'PDFCount', limit: 2 })
+
+  if (hasReachedLimit) {
+    return {
+      success: false,
+      message: 'The user has reached the limit of PDFs generated',
+      url: '',
+    }
+  }
+
   const { pdfShiftApiKey } = useRuntimeConfig()
 
   const htmlContent = markdownIt({ html: true })
@@ -26,7 +37,6 @@ export default async ({ markdownContent }: CreateCVProps) => {
         source: content,
         format: 'Letter',
         margin: '40px 60px',
-        sandbox: true,
       }),
     })
 

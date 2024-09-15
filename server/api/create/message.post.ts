@@ -41,9 +41,9 @@ export default defineEventHandler(async (event) => {
           const calls = data.data.required_action?.submit_tool_outputs.tool_calls || []
           for (const call of calls) {
             if (call.function.name === 'send_email') {
-              const { senderName, senderEmail, content, emailsSent } = JSON.parse(call.function.arguments)
+              const { senderName, senderEmail, content } = JSON.parse(call.function.arguments)
 
-              const response = await sendEmail(senderName, senderEmail, content, emailsSent)
+              const response = await sendEmail(senderName, senderEmail, content)
 
               await client.beta.threads.runs.submitToolOutputsStream(body.threadId, data.data.id, {
                 tool_outputs: [

@@ -4,4 +4,4 @@ export type Message = OpenAI.Chat.Completions.ChatCompletionMessageParam
 
 export type StreamData = { type: 'message', content: string } | { type: 'system', content: Array<Message> }
 
-export type KVData = { PDFCount?: number }
+export type KVData = { PDFCount?: number, emailCount?: number }

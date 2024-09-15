@@ -1,12 +1,15 @@
 import formData from 'form-data'
 import type { MessagesSendResult } from 'mailgun.js'
 import Mailgun from 'mailgun.js'
+import hasReachedLimitHandler from './hasReachedLimit'
 
-export default async (senderName: string, senderEmail: string, content: string, emailsSent: number): Promise<MessagesSendResult> => {
-  if (emailsSent > 0) {
+export default async (senderName: string, senderEmail: string, content: string): Promise<MessagesSendResult> => {
+  const hasReachedLimit = await hasReachedLimitHandler({ type: 'emailCount', limit: 2 })
+
+  if (hasReachedLimit) {
     return {
       status: 429,
-      message: 'You have reached the limit of emails sent',
+      message: 'The user has reached the limit of emails sent',
     }
   }
 
