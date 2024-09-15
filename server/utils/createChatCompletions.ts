@@ -3,6 +3,7 @@ import DOMPurify from 'isomorphic-dompurify'
 import { getContext, sendEmail, createCV } from '~/ai/tools'
 import sendEmailUtility from '~/server/utils/sendEmail'
 import createCVUtility from '~/server/utils/createCV'
+import getContextUtility from '~/server/utils/getContext'
 import type { Message } from '~/types/types'
 
 type CreateChatCompletionProps = {
@@ -91,17 +92,8 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
             switch (toolCall.name) {
               case 'getContext': {
                 const { searchQuery } = JSON.parse(toolCall.args)
-                const vectors = await createEmbedding({ message: searchQuery })
-                const records = await queryVectorDB({ vectors })
 
-                const existingDocumentIds: Array<string> = sanitizedMessages
-                  .filter(message => message.role === 'tool')
-                  .map(message => JSON.parse(message.content as string).id)
-
-                // Filter out documents that have already been sent to the user.
-                const filteredRecords = records.filter(record => !existingDocumentIds.includes(record.id))
-
-                const documents = await getEntriesById({ contentType: 'datasetItem', ids: filteredRecords.map(match => match.id) })
+                const documents = await getContextUtility({ searchQuery, messages: sanitizedMessages })
 
                 toolResults.push({
                   role: 'tool',
