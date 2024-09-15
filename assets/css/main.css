@@ -9,11 +9,11 @@
         }
 
         ol {
-            @apply list-decimal;
+            @apply list-decimal mb-4;
         }
 
         ul {
-            @apply list-disc;
+            @apply list-disc mb-4;
         }
 
         ol, ul {
@@ -30,6 +30,14 @@
 
         a {
             @apply font-semibold text-rose-500;
+        }
+
+        hr {
+            @apply mb-4;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            @apply mb-4 font-bold;
         }
     }
 }
