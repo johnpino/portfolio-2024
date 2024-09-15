@@ -40,28 +40,25 @@
           :placeholder="!isMounted ? 'Loading...' : inputPlaceholder"
           required
         />
-        <div class="flex gap-4 items-start">
+        <div class="grid gap-2 lg:gap-4 lg:auto-cols-auto lg:grid-flow-col items-start">
           <template v-if="queries?.length">
             <div class="max-w-[500px] overflow-x-scroll pb-2">
               <div class="flex gap-4">
-                <template
+                <button
                   v-for="query in queries"
-                  :key="query"
+                  :key="query.value"
+                  class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-100 disabled:bg-slate-50 disabled:text-slate-300"
+                  :disabled="query.wasSent || isLoading || !isMounted"
+                  @click="sendQuery(query)"
                 >
-                  <button
-                    class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-100 disabled:bg-slate-50 disabled:text-slate-300"
-                    :disabled="query.wasSent || isLoading || !isMounted"
-                    @click="sendQuery(query)"
-                  >
-                    <span class="px-3">{{ query.value }}</span>
-                    <div class="p-3 border-l border-solid border-slate-100 bg-slate-200 group-disabled:bg-slate-50 group-hover:bg-rose-50 rounded-tr-sm rounder-br-sm transition-all">
-                      <Icon
-                        name="fa6-regular:paper-plane"
-                        mode="svg"
-                      />
-                    </div>
-                  </button>
-                </template>
+                  <span class="px-3">{{ query.value }}</span>
+                  <div class="p-3 border-l border-solid border-slate-100 bg-slate-200 group-disabled:bg-slate-50 group-hover:bg-rose-500 group-hover:text-white rounded-tr-sm rounder-br-sm transition-all">
+                    <Icon
+                      name="fa6-regular:paper-plane"
+                      mode="svg"
+                    />
+                  </div>
+                </button>
               </div>
             </div>
           </template>
