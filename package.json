@@ -24,6 +24,7 @@
     "@types/contentful-resolve-response": "^0.1.33",
     "@vercel/blob": "^0.23.4",
     "contentful-resolve-response": "^1.9.0",
+    "isomorphic-dompurify": "^2.15.0",
     "markdown-it": "^14.1.0",
     "nuxt": "^3.12.4",
     "openai": "^4.57.0",

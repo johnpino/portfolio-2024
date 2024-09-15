@@ -1,4 +1,5 @@
 import OpenAI from 'openai'
+import DOMPurify from 'isomorphic-dompurify'
 import { getContext, sendEmail, createCV } from '~/ai/tools'
 import sendEmailUtility from '~/server/utils/sendEmail'
 import createCVUtility from '~/server/utils/createCV'
@@ -16,15 +17,34 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
     apiKey: openaiApiKey,
   })
 
-  // Filter out assistant messages with a tool call property, or tool messages.
-  const systemMessages: Array<Message> = messages.filter(message => (message.role === 'assistant' && message.tool_calls) || message.role === 'tool')
-
   console.log('createChatCompletions -> creating a chat completion')
 
   try {
+    // Sanitize the user messages content and check if it's empty.
+    const sanitizedMessages = messages.map((message) => {
+      if (message.role === 'user') {
+        const sanitizedContent = DOMPurify.sanitize(message.content as string, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] }).trim()
+
+        if (sanitizedContent) {
+          return {
+            ...message,
+            content: sanitizedContent,
+          }
+        }
+        else {
+          throw new Error('There was an error sanitizing the message content.')
+        }
+      }
+
+      return message
+    })
+
+    // Filter out assistant messages with a tool call property, or tool messages.
+    const systemMessages: Array<Message> = sanitizedMessages.filter(message => (message.role === 'assistant' && message.tool_calls) || message.role === 'tool')
+
     const chatCompletionStream = await openAIClient.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages,
+      messages: sanitizedMessages,
       tools: [getContext, sendEmail, createCV],
       stream: true,
       stream_options: {
@@ -74,7 +94,7 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
                 const vectors = await createEmbedding({ message: searchQuery })
                 const records = await queryVectorDB({ vectors })
 
-                const existingDocumentIds: Array<string> = messages
+                const existingDocumentIds: Array<string> = sanitizedMessages
                   .filter(message => message.role === 'tool')
                   .map(message => JSON.parse(message.content as string).id)
 
@@ -125,7 +145,7 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
               }
             }
           }
-          return createChatCompletions({ messages: [...messages, toolRequest, ...toolResults], stream })
+          return createChatCompletions({ messages: [...sanitizedMessages, toolRequest, ...toolResults], stream })
         }
 
         if (chunk.choices[0].finish_reason !== 'stop') {

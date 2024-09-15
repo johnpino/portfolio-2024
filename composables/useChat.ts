@@ -1,4 +1,5 @@
 import markdownIt from 'markdown-it'
+import DOMPurify from 'isomorphic-dompurify'
 import type { Message } from '~/types/types'
 
 interface UseChatProps {
@@ -21,12 +22,19 @@ export const useChat = (props: UseChatProps) => {
 
     let rawMarkdown = ''
 
-    messages.push({
-      role: 'user',
-      content: message,
-    })
-
     try {
+      const sanitizedMessage = DOMPurify.sanitize(message, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] }).trim()
+
+      // If after sanitizing the message content it's empty, throw an error.
+      if (!sanitizedMessage) {
+        throw new Error('useChat.ts -> There was an error sanitizing the message content.')
+      }
+
+      messages.push({
+        role: 'user',
+        content: sanitizedMessage,
+      })
+
       const stream = await fetch('api/create/chat',
         {
           method: 'post',
@@ -62,6 +70,7 @@ export const useChat = (props: UseChatProps) => {
       messages.push({ role: 'assistant', content: `${answer.content} <strong>Sorry, there was an error. Please try again.</strong>` })
       rawMarkdown = ''
       answer.content = ''
+      isLoading.value = false
     }
   }
 
