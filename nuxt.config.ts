@@ -59,4 +59,7 @@ export default defineNuxtConfig({
       safelist: ['text-rose-500'],
     },
   },
+  experimental: {
+    asyncContext: true,
+  },
 })
