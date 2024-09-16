@@ -12,6 +12,17 @@ type CreateChatCompletionProps = {
 }
 
 const createChatCompletions = async ({ messages, stream }: CreateChatCompletionProps) => {
+  const hasReachedLimitResult = await hasReachedLimit({ type: 'chatCount', limit: 7, expiration: 60 })
+
+  if (hasReachedLimitResult) {
+    stream.write(JSON.stringify({
+      type: 'message',
+      content: 'You have reached the limit of messages sent. Please try again in 1 minute.',
+    }))
+    stream.end()
+    return
+  }
+
   const { openaiApiKey } = useRuntimeConfig()
 
   const openAIClient = new OpenAI({
