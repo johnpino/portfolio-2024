@@ -1,23 +1,19 @@
-import type { KVData } from '~/types/types'
-
 type HandleRateLimitProps = {
-  type: keyof KVData
+  type: string
   limit: number
 }
 
 export default async ({ type, limit }: HandleRateLimitProps) => {
-  const { data, set } = await queryKVDB()
+  const { data, set } = await queryKVDB<number>({ type })
 
-  const limitData = data[type]
-
-  if (!limitData) {
-    await set({ [type]: 1 })
+  if (data === null) {
+    await set(1)
   }
-  else if (limitData >= limit) {
+  else if (data >= limit) {
     return true
   }
   else {
-    await set({ [type]: limitData + 1 })
+    await set(data + 1)
   }
 
   return false

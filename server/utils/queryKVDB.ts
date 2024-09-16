@@ -1,7 +1,10 @@
 import { kv } from '@vercel/kv'
-import type { KVData } from '~/types/types'
 
-export default async () => {
+type QueryKVDBProps = {
+  type: string
+}
+
+export default async <U>({ type }: QueryKVDBProps) => {
   const event = useEvent()
   const xForwardedFor = event.node.req.headers['x-forwarded-for']
   const ipAddress = Array.isArray(xForwardedFor)
@@ -12,11 +15,15 @@ export default async () => {
     throw new Error('No IP address found in the request')
   }
 
-  const data = await kv.get<KVData>(ipAddress) || {}
-  const ttl = await kv.ttl(ipAddress) // Returns -2 if the key does not exist or -1 if it does not expire
+  const data = await kv.get<U>(`${ipAddress}:${type}`)
 
-  const set = async (value: KVData) => {
-    return kv.set(ipAddress, { ...data, ...value }, { ex: ttl < 0 ? 60 * 60 * 24 : ttl })
+  const set = async (value: U) => {
+    if (data === null) {
+      return kv.set(`${ipAddress}:${type}`, value, { ex: 60 * 60 * 24 })
+    }
+    else {
+      return kv.set(`${ipAddress}:${type}`, value, { keepTtl: true })
+    }
   }
 
   return {
