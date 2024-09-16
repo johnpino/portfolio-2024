@@ -61,9 +61,10 @@
           :disabled="isLoading || !isMounted"
           :placeholder="!isMounted ? 'Loading...' : inputPlaceholder"
           required
-          @keydown.enter.prevent="submitHandler"
+          @keydown.enter.prevent="submitButtonRef?.click()"
         />
         <button
+          ref="submitButtonRef"
           class="h-12 aspect-square bg-rose-500 rounded-full text-white text-xs font-bold disabled:bg-rose-200 flex justify-center items-center flex-shrink-0 transition-all hover:bg-rose-700 p-3"
           type="submit"
           :disabled="isLoading || !isMounted"
@@ -113,10 +114,12 @@ watch(
 // Adjust loading label based on loading state
 let timeoutId: ReturnType<typeof setTimeout>
 
-watch(isLoading, (newVal) => {
+watch(isLoading, async (newVal) => {
   if (!newVal) {
     clearTimeout(timeoutId)
     loadingLabel.value = '...'
+    await nextTick()
+    if (textareaRef.value) textareaRef.value.focus()
   }
 
   if (newVal) {
@@ -148,6 +151,7 @@ const sendQuery = async (query: { value: string, wasSent: boolean }) => {
 }
 
 const textareaRef = ref<HTMLTextAreaElement>()
+const submitButtonRef = ref<HTMLButtonElement>()
 
 onMounted(() => {
   isMounted.value = true
