@@ -61,6 +61,7 @@
           :disabled="isLoading || !isMounted"
           :placeholder="!isMounted ? 'Loading...' : inputPlaceholder"
           required
+          @keydown.enter.prevent="submitHandler"
         />
         <button
           class="h-12 aspect-square bg-rose-500 rounded-full text-white text-xs font-bold disabled:bg-rose-200 flex justify-center items-center flex-shrink-0 transition-all hover:bg-rose-700 p-3"
