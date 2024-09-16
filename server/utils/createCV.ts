@@ -17,7 +17,7 @@ export default async ({ markdownContent }: CreateCVProps) => {
     }
   }
 
-  const hasReachedPersonalLimit = await hasReachedLimit({ type: 'PDFCount', limit: 2, global: false })
+  const hasReachedPersonalLimit = await hasReachedLimit({ type: 'PDFCount', limit: 1, global: false })
 
   if (hasReachedPersonalLimit) {
     return {
