@@ -7,7 +7,7 @@ type CreateCVProps = {
 }
 
 export default async ({ markdownContent }: CreateCVProps) => {
-  const hasReachedLimit = await hasReachedLimitHandler({ type: 'PDFCount', limit: 2 })
+  const hasReachedLimit = await hasReachedLimitHandler({ type: 'PDFCount', limit: 2, expiration: 60 * 60 * 8 })
 
   if (hasReachedLimit) {
     return {

@@ -17,9 +17,9 @@ export default async <U>({ type }: QueryKVDBProps) => {
 
   const data = await kv.get<U>(`${ipAddress}:${type}`)
 
-  const set = async (value: U) => {
+  const set = async (value: U, expiration: number = 60 * 60 * 24) => {
     if (data === null) {
-      return kv.set(`${ipAddress}:${type}`, value, { ex: 60 * 60 * 24 })
+      return kv.set(`${ipAddress}:${type}`, value, { ex: expiration })
     }
     else {
       return kv.set(`${ipAddress}:${type}`, value, { keepTtl: true })
