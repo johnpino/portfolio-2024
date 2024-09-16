@@ -4,14 +4,15 @@
     <div class="max-w-[500px]">
       <div
         ref="scrollableAreaRef"
-        class="rich-text h-80 overflow-y-scroll rounded-t-md bg-slate-50 p-4 flex gap-4 flex-col border border-b-0"
+        class="rich-text h-80 overflow-y-scroll rounded-md bg-slate-50 p-4 flex gap-4 flex-col border mb-4"
       >
         <template v-if="queries?.length">
           <div class="flex gap-4 flex-wrap">
             <button
-              v-for="query in queries"
+              v-for="(query, i) in queries"
               :key="query.value"
               class="group rounded-sm text-xs font-light flex-shrink-0 flex items-center transition-all bg-slate-100 disabled:bg-slate-50 disabled:text-slate-300"
+              :class="{ 'hidden lg:flex': i > 2 }"
               :disabled="query.wasSent || isLoading || !isMounted"
               @click="sendQuery(query)"
             >
@@ -30,8 +31,8 @@
           v-for="message in messagesUI"
           :key="message.content?.toString()"
           ref="messagesRef"
-          class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm"
-          :class="message.role === 'user' && 'self-end bg-slate-200'"
+          class="py-2 px-4 bg-slate-100 rounded-md font-light text-sm max-w-[85%]"
+          :class="{ 'self-end bg-slate-200': message.role === 'user' }"
           v-html="message.content"
         />
         <div
@@ -48,30 +49,29 @@
         </div>
       </div>
       <form
-        class="flex gap-4 flex-col mb-4"
+        class="grid grid-cols-[1fr_auto] gap-4 items-end mb-4"
         @submit.prevent="submitHandler"
-        @keyup.enter="submitHandler"
       >
         <textarea
+          ref="textareaRef"
           v-model="question"
+          rows="1"
           maxlength="150"
-          class="border border-t-0 p-4 resize-none text-sm rounded-sm"
-          :disabled="!isMounted"
+          class="w-full border p-4 resize-none text-sm rounded-md"
+          :disabled="isLoading || !isMounted"
           :placeholder="!isMounted ? 'Loading...' : inputPlaceholder"
           required
         />
         <button
-          class="w-fit ml-auto bg-rose-500 rounded-sm text-white text-xs font-bold disabled:bg-rose-200 flex items-center flex-shrink-0 transition-all hover:bg-rose-700"
+          class="h-12 aspect-square bg-rose-500 rounded-full text-white text-xs font-bold disabled:bg-rose-200 flex justify-center items-center flex-shrink-0 transition-all hover:bg-rose-700 p-3"
           type="submit"
           :disabled="isLoading || !isMounted"
         >
-          <span class="px-3">{{ send }}</span>
-          <div class="p-3 border-l border-solid border-rose-300 rounded-tr-sm rounded-br-sm transition-all">
-            <Icon
-              name="fa6-regular:paper-plane"
-              mode="svg"
-            />
-          </div>
+          <Icon
+            name="fa6-regular:paper-plane"
+            mode="svg"
+            size="1rem"
+          />
         </button>
       </form>
     </div>
@@ -79,6 +79,7 @@
 </template>
 
 <script setup lang="ts">
+import autosize from 'autosize'
 import type { MyChatUIProps } from './MyChatUIProps'
 
 const { initialMessage, predefinedQueries } = defineProps<MyChatUIProps>()
@@ -127,6 +128,8 @@ watch(isLoading, (newVal) => {
 const submitHandler = async () => {
   const value = question.value
   question.value = null
+  await nextTick()
+  if (textareaRef.value) autosize.update(textareaRef.value)
   await sendMessage(value)
 }
 
@@ -143,7 +146,10 @@ const sendQuery = async (query: { value: string, wasSent: boolean }) => {
   await sendMessage(query.value)
 }
 
+const textareaRef = ref<HTMLTextAreaElement>()
+
 onMounted(() => {
   isMounted.value = true
+  if (textareaRef.value) autosize(textareaRef.value)
 })
 </script>
