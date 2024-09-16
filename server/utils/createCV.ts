@@ -1,18 +1,28 @@
 import { put } from '@vercel/blob'
 import markdownIt from 'markdown-it'
-import hasReachedLimitHandler from './hasReachedLimit'
+import hasReachedLimit from './hasReachedLimit'
 
 type CreateCVProps = {
   markdownContent: string
 }
 
 export default async ({ markdownContent }: CreateCVProps) => {
-  const hasReachedLimit = await hasReachedLimitHandler({ type: 'PDFCount', limit: 2, expiration: 60 * 60 * 8 })
+  const hasReachedGlobalLimit = await hasReachedLimit({ type: 'PDFCount', limit: 20, global: true })
 
-  if (hasReachedLimit) {
+  if (hasReachedGlobalLimit) {
     return {
       success: false,
-      message: 'The user has reached the limit of PDFs generated',
+      message: `The system has reached the limit of emails sent`,
+      url: '',
+    }
+  }
+
+  const hasReachedPersonalLimit = await hasReachedLimit({ type: 'PDFCount', limit: 2, global: false })
+
+  if (hasReachedPersonalLimit) {
+    return {
+      success: false,
+      message: `The user has reached the limit of emails sent`,
       url: '',
     }
   }

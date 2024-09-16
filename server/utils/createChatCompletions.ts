@@ -12,7 +12,7 @@ type CreateChatCompletionProps = {
 }
 
 const createChatCompletions = async ({ messages, stream }: CreateChatCompletionProps) => {
-  const hasReachedLimitResult = await hasReachedLimit({ type: 'chatCount', limit: 7, expiration: 60 })
+  const hasReachedLimitResult = await hasReachedLimit({ type: 'chatCount', limit: 7, expiration: 60, global: false })
 
   if (hasReachedLimitResult) {
     stream.write(JSON.stringify({
