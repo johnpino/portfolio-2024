@@ -17,7 +17,7 @@ const createChatCompletions = async ({ messages, stream }: CreateChatCompletionP
   if (hasReachedLimitResult) {
     stream.write(JSON.stringify({
       type: 'message',
-      content: 'You have reached the limit of messages sent. Please try again in 1 minute.',
+      content: 'The user has reached the limit of messages sent. Please try again in 1 minute.',
     }))
     stream.end()
     return
